@@ -1,0 +1,37 @@
+---
+title: "Five years of global OHI assessments"
+output:
+  html_document:
+    fig_width: 1
+---
+
+```{r setup, echo=F, warning=FALSE, message=F}
+source("./_site.R")
+```
+
+<!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
+Put in your css file or directly in rmarkdown--->
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+</style>
+
+<br>
+2016 marks the fifth year of annual global Ocean Health Index (OHI) assessments, with scores representing ocean health for 220 coastal nations and territories using the best available data each year.  
+
+
+The OHI framework has not changed since its inception in 2012 ([*Halpern et al. 2012*](http://www.nature.com/nature/journal/v488/n7413/full/nature11397.html)). Goals are scored individually based on current status, trend, and external pressures and resilience measures for each coastal nation before being combined together. However, like any assessment methodology, the OHI benefits from constant evaluation and improvement aimed at incorporating new knowledge, data and understanding. For further information, see [*Halpern et al. 2015*](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0117863) and [*Lowndes et al. 2015*](https://peerj.com/articles/1503).
+<br>
+<br>
+[<img src="https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=576&h=288" width="150px">](http://ohi-science.org)  
+[ohi-science.org home](http://ohi-science.org)
+
+<!--- TODO:
+Show a static map of 2016 scores instead of the regions. 
+
+Explore more on the Data Explorer page
+Download on the download page...
+--->

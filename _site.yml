@@ -1,0 +1,17 @@
+name: "Global Ocean Health Index"
+navbar:
+  title: "HOME"
+  left:
+#    - text: "Goals"
+#      href: goals.html
+#    - text: "Download"
+#      href: download.html
+output_dir: "."
+output:
+  html_document:
+    theme: yeti
+    highlight: textmate
+#    include:
+#      after_body: _footer.html
+    css:
+      - "_sass/main.css"
