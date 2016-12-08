@@ -9,6 +9,12 @@ output:
 ```{r setup, echo=F, warning=FALSE, message=F}
 source("./_site.R")
 ```
+Easiest to learn from a working example, so let's explore this repo. 
+
+## Explore first on GitHub
+
+Notice the gh-pages branch
+
 ## Fork and clone to your computer
 
 ## Explore
