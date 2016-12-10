@@ -6,6 +6,8 @@ navbar:
       href: first_observations.html
     - text: "Basic Workflow"
       href: basic_workflow.html
+    - text: "Getting Sophisticated"
+      href: getting_sophisticated.html
 output_dir: "."
 output:
   html_document:
