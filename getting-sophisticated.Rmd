@@ -25,7 +25,7 @@ Today's date is `r Sys.Date()`. It is
 
 Plot of cars
 
-```{r}
+```{r plot cars}
 plot(cars)
 ```
 
@@ -36,6 +36,11 @@ source("./advanced/_site.R")
 ```
  
 ## Styling
+
+Disclaimer: Most of what is here I figured out through googling and trial and error...so there are most definitely better and more elegant ways to do this. But here are some ideas: 
+
+### figures
+sizing, centering, 
 
 ### columns
  
@@ -56,20 +61,47 @@ Put in your css file or directly in rmarkdown--->
 
 ----
 
+-----
+
 <div class="col2">
-![](https://docs.google.com/drawings/d/1O08iEoo3qxOZRoK6Ohv-jdouTBsN_kafJjIhEEqb-yg/pub?w=960&h=720)
+**Column 1**
 
+- note `<div class="col2">` and `</div>`
+- what beautiful bullet points
 <br>
 <br>
-<br>
-**Goal scores are calculated by modeling data first as Present Status and Likely Future State.**  
-Likely Future State is a combination of status, trend, pressures and resilience calculations, all of which require the best available data but ultimately contribute to goals scores unequally.  
-Scroll down to access metadata and data processing information.
-<!--- TODO: link to supplement --->
 
+**Column 2**
+
+- I have 3 bullet points here
+- which means to align with the left column
+- I added a `<br>` there
 </div>
-----
+
+<br>
+
+<center>
+**Here the text is centered**
+
+• [2016 Global OHI Scores Report](https://github.com/OHI-Science/ohi-science.github.io/raw/master/assets/downloads/other/2016_Global_OHI_Scores_Report_compressed.pdf) • [Peer-reviewed publications](http://ohi-science.org/resources/publications/) • 
+</center>
+
+---- 
+
 
 ### colored text
 
 ## Templates
+
+### troubleshooting
+
+If when running `rmarkdown::render_site()` you get this error: 
+
+```{r}
+# Error in object[seq_len(ile)] : 
+#  object of type 'symbol' is not subsettable
+```
+Go to *Session > Restart R* and try again. 
+
+  
+

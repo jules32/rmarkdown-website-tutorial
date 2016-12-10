@@ -276,7 +276,7 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="first-obs.html">First Observations</a>
+  <a href="first_obs.html">First Observations</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -312,7 +312,7 @@ div.tocify {
 <h3>in a chunk</h3>
 <p>Plot of cars</p>
 <pre class="r"><code>plot(cars)</code></pre>
-<p><img src="getting-sophisticated_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="getting-sophisticated_files/figure-html/plot%20cars-1.png" width="672" /></p>
 </div>
 <div id="with-_site.r" class="section level3">
 <h3>with <code>_site.R</code></h3>
@@ -320,6 +320,11 @@ div.tocify {
 </div>
 <div id="styling" class="section level2">
 <h2>Styling</h2>
+<p>Disclaimer: Most of what is here I figured out through googling and trial and error…so there are most definitely better and more elegant ways to do this. But here are some ideas:</p>
+<div id="figures" class="section level3">
+<h3>figures</h3>
+<p>sizing, centering,</p>
+</div>
 <div id="columns" class="section level3">
 <h3>columns</h3>
 <!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
@@ -337,15 +342,25 @@ Put in your css file or directly in rmarkdown--->
 
 </div>
 <hr />
+<hr />
 <div class="col2">
-<div class="figure">
-<img src="https://docs.google.com/drawings/d/1O08iEoo3qxOZRoK6Ohv-jdouTBsN_kafJjIhEEqb-yg/pub?w=960&amp;h=720" />
-
+<p><strong>Column 1</strong></p>
+<ul>
+<li>note <code>&lt;div class=&quot;col2&quot;&gt;</code> and <code>&lt;/div&gt;</code></li>
+<li>what beautiful bullet points <br> <br></li>
+</ul>
+<p><strong>Column 2</strong></p>
+<ul>
+<li>I have 3 bullet points here</li>
+<li>which means to align with the left column</li>
+<li>I added a <code>&lt;br&gt;</code> there</li>
+</ul>
 </div>
-<p><br> <br> <br> <strong>Goal scores are calculated by modeling data first as Present Status and Likely Future State.</strong><br />
-Likely Future State is a combination of status, trend, pressures and resilience calculations, all of which require the best available data but ultimately contribute to goals scores unequally.<br />
-Scroll down to access metadata and data processing information. <!--- TODO: link to supplement ---></p>
-</div>
+<p><br></p>
+<center>
+<p><strong>Here the text is centered</strong></p>
+• <a href="https://github.com/OHI-Science/ohi-science.github.io/raw/master/assets/downloads/other/2016_Global_OHI_Scores_Report_compressed.pdf">2016 Global OHI Scores Report</a> • <a href="http://ohi-science.org/resources/publications/">Peer-reviewed publications</a> •
+</center>
 <hr />
 </div>
 <div id="colored-text" class="section level3">
@@ -354,6 +369,11 @@ Scroll down to access metadata and data processing information. <!--- TODO: link
 </div>
 <div id="templates" class="section level2">
 <h2>Templates</h2>
+<div id="troubleshooting" class="section level3">
+<h3>troubleshooting</h3>
+<p>If when running <code>rmarkdown::render_site()</code> you get this error:</p>
+<p>Go to <em>Session &gt; Restart R</em> and try again.</p>
+</div>
 </div>
 
 
