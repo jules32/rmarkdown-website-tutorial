@@ -1,5 +1,6 @@
 ---
 title: "Making free websites with RStudio's R Markdown"
+author:  "[Julie Lowndes](https://github.com/jules32) at [NCEAS](https://www.nceas.ucsb.edu/), 12/14/16"
 output:
   html_document:
     fig_width: 1

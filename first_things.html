@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>Goals in global OHI assessments</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <link rel="stylesheet"
@@ -164,6 +167,100 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.9em;
+  padding-left: 5px;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -191,18 +288,62 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Goals in global OHI assessments</h1>
 
 </div>
 
 
-<div id="rmarkdown-website-tutorial" class="section level1">
-<h1>rmarkdown-website-tutorial</h1>
-<p>A tutorial for creating websites using R Markdown.</p>
-<p>To build the website, run <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html"><code>rmarkdown::render_site()</code></a>, which knits each Rmarkdown (*.Rmd) based on parameters in <code>_site.R</code> and <code>_site.yml</code> before pushing the files back to Github.</p>
+<p>Easiest to learn from a working example, so let’s explore this repo.</p>
+<div id="explore-first-on-github" class="section level2">
+<h2>Explore first on GitHub</h2>
+<p>Notice the gh-pages branch</p>
+</div>
+<div id="fork-and-clone-to-your-computer" class="section level2">
+<h2>Fork and clone to your computer</h2>
+</div>
+<div id="explore" class="section level2">
+<h2>Explore</h2>
+<div id="gh-pages-branch" class="section level3">
+<h3>gh-pages branch</h3>
+<p>Make sure it’s a gh-pages branch!</p>
+</div>
+</div>
+<div id="markdown-syntax" class="section level2">
+<h2>Markdown Syntax</h2>
+<!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
+Put in your css file or directly in rmarkdown--->
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+</style>
+<p><br> <strong>Global Ocean Health Index assessments score 10 goals, some of which have sub-goals</strong>. Here you will find a description about how goals are represented in global assessments. Goal-by-goal, you can explore the data used to model status and trend, as well as the pressures and resilience measures contributing to goal scores.</p>
+<div class="figure">
+<img src="https://docs.google.com/drawings/d/17N97_cydibY4QM79tnVf-hLDii0NNm3VhBJ2hhkKKkM/pub?w=1344&amp;h=192" />
+
+</div>
+<hr />
+<div class="col2">
+<div class="figure">
+<img src="https://docs.google.com/drawings/d/1O08iEoo3qxOZRoK6Ohv-jdouTBsN_kafJjIhEEqb-yg/pub?w=960&amp;h=720" />
+
+</div>
+<p><br> <br> <br> <strong>Goal scores are calculated by modeling data first as Present Status and Likely Future State.</strong><br />
+Likely Future State is a combination of status, trend, pressures and resilience calculations, all of which require the best available data but ultimately contribute to goals scores unequally.<br />
+Scroll down to access metadata and data processing information. <!--- TODO: link to supplement ---></p>
+</div>
+<hr />
+<hr />
+<p><br> <br> <a href="http://ohi-science.org"><img src="https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=576&h=288" width="100px"></a><br />
+<a href="http://ohi-science.org">ohi-science.org home</a></p>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 

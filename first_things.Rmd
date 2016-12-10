@@ -23,6 +23,8 @@ Notice the gh-pages branch
 Make sure it's a gh-pages branch!
  
  
+## Markdown Syntax 
+ 
 <!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
 Put in your css file or directly in rmarkdown--->
 <style>
