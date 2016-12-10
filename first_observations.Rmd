@@ -1,0 +1,35 @@
+---
+title: "First Observations"
+---
+
+**Here's the plan**:
+
+The easiest to learn from a working example, so let's explore this repo. We are going to start online, then clone the repo and explore by going back and forth between the R Markdown editor and the built pages.
+
+## Explore first on GitHub
+
+Note the url of this website: <http://jules32.github.io/rmarkdown-website-tutorial>. This means that there is a folder called `rmarkdown-website-tutorial` in `jules32`'s Github account, so let's head to <https://github.com/jules32/rmarkdown-website-tutorial>.
+
+Note: you can have github websites point to a different url you have purchased.
+
+Notice the `gh-pages` branch
+
+![](images/gh-pages.png)
+
+Notice the filenames, similar but also _site.yml
+
+
+
+## Fork to your account, clone to your computer
+
+screenshot of this
+
+screenshot of RStudio pane, highlight knit buttons
+ 
+ 
+## Markdown Syntax 
+ 
+screenshot garrett
+
+
+
