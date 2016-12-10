@@ -1,14 +1,32 @@
 ---
-title: "Goals in global OHI assessments"
+title: "Getting Sophisticated"
 output:
   html_document:
     toc: true
     toc_float: true
 ---
 
+## With R code
+
+### in line
+
+Today's date is `r Sys.Date()`. I know that Rcode. 
+
+### in a chunk
+
+```{r}
+
+```
+
+### using _site.R
+
 ```{r setup, echo=F, warning=FALSE, message=F}
 source("./_site.R")
 ```
+ 
+## Styling
+
+### columns
  
 <!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
 Put in your css file or directly in rmarkdown--->
@@ -41,8 +59,6 @@ Scroll down to access metadata and data processing information.
 </div>
 ----
 
-----
-<br>
-<br>
-[<img src="https://docs.google.com/drawings/d/1633uvIYgsBhiKBddQAaTlvYDJgOK1uiDB6wkooNyhFc/pub?w=576&h=288" width="100px">](http://ohi-science.org)  
-[ohi-science.org home](http://ohi-science.org)
+### colored text
+
+
