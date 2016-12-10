@@ -2,8 +2,8 @@ name: "R Markdown Websites Tutorial"
 navbar:
   title: "HOME"
   left:
-#    - text: "Goals"
-#      href: goals.html
+    - text: "First Observations"
+      href: first_obs.html
 #    - text: "Download"
 #      href: download.html
 output_dir: "."

@@ -13,7 +13,7 @@ It's possible to create well-designed websites for free using [RStudio's R Markd
 
 The best way to learn is to follow along with your own laptop, but all are welcome. We'll spend half the time with the tutorial and half the time for you to work on your own website and get help. If you bring your laptop please do this beforehand: 
 
-1. install RStudio
+1. install [RStudio](https://www.rstudio.com/products/rstudio/download/)
 1. create a [GitHub]((http://github.com)) account ([advice](http://happygitwithr.com/github-acct.html))
 1. set up your computer to talk to GitHub
     - have RStudio linked directly (preferred) ([instructions sections 8-14](http://happygitwithr.com/hello-git.html))

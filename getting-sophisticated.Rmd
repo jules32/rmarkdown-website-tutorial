@@ -6,6 +6,13 @@ output:
     toc_float: true
 ---
 
+**First off**, note that 
+
+1. there is a table of contents, and 
+1. it is floating
+1. also note that my numbering in this list renders nicely
+
+
 ## With R code
 
 You can execute R code each time you build your website. 
@@ -16,11 +23,13 @@ Today's date is `r Sys.Date()`. It is
 
 ### in a chunk
 
-```{r}
+Plot of cars
 
+```{r}
+plot(cars)
 ```
 
-### using _site.R
+### with `_site.R`
 
 ```{r setup, echo=F, warning=FALSE, message=F}
 source("./advanced/_site.R")

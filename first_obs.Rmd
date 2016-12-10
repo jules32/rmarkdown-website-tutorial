@@ -1,0 +1,25 @@
+---
+title: "Exploring the architecture"
+---
+
+The easiest to learn from a working example, so let's explore this repo. We are going to be going back and forth between the R Markdown editor and the rendered pages
+
+## Explore first on GitHub
+
+Note the url of this website: <http://jules32.github.io/rmarkdown-website-tutorial>. This means that there is a folder called `rmarkdown-website-tutorial` in jules32's Github account, so let's head to <https://github.com/jules32/rmarkdown-website-tutorial>.
+
+Notice the `gh-pages` branch
+
+## Fork to your account, clone to your computer
+
+screenshot of this
+
+screenshot of RStudio pane, highlight knit buttons
+ 
+ 
+## Markdown Syntax 
+ 
+screenshot garrett
+
+
+
