@@ -1,23 +1,16 @@
 ---
-title: "Goals in global OHI assessments"
-output:
-  html_document:
-    toc: true
-    toc_float: true
+title: "First Observations"
 ---
 
-Easiest to learn from a working example, so let's explore this repo. 
+The easiest to learn from a working example, so let's explore this repo. 
 
 ## Explore first on GitHub
 
-Notice the gh-pages branch
+Notice the `gh-pages` branch
 
-## Fork and clone to your computer
+## Fork to your account, clone to your computer
 
 ## Explore
- 
-### gh-pages branch
-Make sure it's a gh-pages branch!
  
  
 ## Markdown Syntax 

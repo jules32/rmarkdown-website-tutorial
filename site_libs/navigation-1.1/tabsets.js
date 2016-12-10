@@ -29,7 +29,6 @@ window.buildTabsets = function(tocID) {
     $(tabs[0]).before(tabContent);
 
     // build the tabset
-    var activeTab = 0;
     tabs.each(function(i) {
 
       // get the tab div
@@ -37,10 +36,6 @@ window.buildTabsets = function(tocID) {
 
       // get the id then sanitize it for use with bootstrap tabs
       var id = tab.attr('id');
-
-      // see if this is marked as the active tab
-      if (tab.hasClass('active'))
-        activeTab = i;
 
       // remove any table of contents entries associated with
       // this ID (since we'll be removing the heading element)
@@ -61,6 +56,8 @@ window.buildTabsets = function(tocID) {
       a.attr('aria-controls', id);
       var li = $('<li role="presentation"></li>');
       li.append(a);
+      if (i === 0)
+        li.attr('class', 'active');
       tabList.append(li);
 
       // set it's attributes
@@ -69,17 +66,15 @@ window.buildTabsets = function(tocID) {
       tab.addClass('tabbed-pane');
       if (fade)
         tab.addClass('fade');
+      if (i === 0) {
+        tab.addClass('active');
+        if (fade)
+          tab.addClass('in');
+      }
 
       // move it into the tab content div
       tab.detach().appendTo(tabContent);
     });
-
-    // set active tab
-    $(tabList.children('li')[activeTab]).addClass('active');
-    var active = $(tabContent.children('div.section')[activeTab]);
-    active.addClass('active');
-    if (fade)
-      active.addClass('in');
   }
 
   // convert section divs with the .tabset class to tabsets

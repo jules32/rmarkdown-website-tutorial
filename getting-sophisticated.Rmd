@@ -8,9 +8,11 @@ output:
 
 ## With R code
 
+You can execute R code each time you build your website. 
+
 ### in line
 
-Today's date is `r Sys.Date()`. I know that Rcode. 
+Today's date is `r Sys.Date()`. It is  
 
 ### in a chunk
 
@@ -21,7 +23,7 @@ Today's date is `r Sys.Date()`. I know that Rcode.
 ### using _site.R
 
 ```{r setup, echo=F, warning=FALSE, message=F}
-source("./_site.R")
+source("./advanced/_site.R")
 ```
  
 ## Styling
@@ -61,4 +63,4 @@ Scroll down to access metadata and data processing information.
 
 ### colored text
 
-
+## Templates
