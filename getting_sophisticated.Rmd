@@ -27,6 +27,7 @@ Plot of cars
 
 ```{r plot cars}
 plot(cars)
+plot(iris3)
 ```
 
 ### with `_site.R`
@@ -91,7 +92,7 @@ Put in your css file or directly in rmarkdown--->
 
 ### colored text
 
-## Templates
+## Templates/themes
 
 ### troubleshooting
 
@@ -100,6 +101,8 @@ If when running `rmarkdown::render_site()` you get this error:
 ```{r}
 # Error in object[seq_len(ile)] : 
 #  object of type 'symbol' is not subsettable
+
+
 ```
 Go to *Session > Restart R* and try again. 
 

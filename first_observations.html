@@ -11,7 +11,7 @@
 
 
 
-<title>First Observations</title>
+<title>First observations: let’s start exploring</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -191,27 +191,57 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">First Observations</h1>
+<h1 class="title toc-ignore">First observations: let’s start exploring</h1>
 
 </div>
 
 
-<p><strong>Here’s the plan</strong>:</p>
-<p>The easiest to learn from a working example, so let’s explore this repo. We are going to start online, then clone the repo and explore by going back and forth between the R Markdown editor and the built pages.</p>
-<div id="explore-first-on-github" class="section level2">
-<h2>Explore first on GitHub</h2>
-<p>Note the url of this website: <a href="http://jules32.github.io/rmarkdown-website-tutorial" class="uri">http://jules32.github.io/rmarkdown-website-tutorial</a>. This means that there is a folder called <code>rmarkdown-website-tutorial</code> in <code>jules32</code>’s Github account, so let’s head to <a href="https://github.com/jules32/rmarkdown-website-tutorial" class="uri">https://github.com/jules32/rmarkdown-website-tutorial</a>.</p>
-<p>Note: you can have github websites point to a different url you have purchased.</p>
-<p>Notice the <code>gh-pages</code> branch</p>
+<p>With this tutorial, we have a working example website that we will explore together. We’ll start our exploration online looking at the website architecture, then we’ll clone the repo to our local computers. Locally, we will explore further by going back and forth between the R Markdown editor and built webpages, and make modifications. Pushing to Github will make our modifications live!</p>
+<p>We’ll also borrow heavily from <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html">RStudio’s instructions for R Markdown websites</a>, which is highly recommended reading.</p>
+<hr />
+<div id="exploring-online" class="section level2">
+<h2>Exploring online</h2>
+<p><br></p>
+<div id="the-website-itself" class="section level3">
+<h3>The website itself</h3>
+<p>This website has 4 pages:</p>
+<ul>
+<li>Home</li>
+<li>First Observations</li>
+<li>Basic Workflow</li>
+<li>Getting Sophisticated</li>
+</ul>
+<p><code>github.io</code> means that there is a Github repo behind this website, and we also know the username and repo name:</p>
+<p><strong><a href="http://jules32.github.io/rmarkdown-website-tutorial" class="uri">http://jules32.github.io/rmarkdown-website-tutorial</a></strong> &lt;=&gt; <strong><a href="https://github.com/jules32/rmarkdown-website-tutorial" class="uri">https://github.com/jules32/rmarkdown-website-tutorial</a></strong></p>
+<p>(Note: you can have github websites point to different urls if you don’t want the <code>github.io</code>.)</p>
+<p><br></p>
+</div>
+<div id="the-websites-repo" class="section level3">
+<h3>The website’s repo</h3>
+<p><strong>First, note the <code>gh-pages</code> branch</strong> - this is critical for building free webpages. You can usually name branches whatever you want, but the <code>gh-pages</code> name means it can be built as a website. <a href="https://help.github.com/articles/setting-the-default-branch/">I set it as my default branch</a>.</p>
 <div class="figure">
 <img src="images/gh-pages.png" />
 
 </div>
-<p>Notice the filenames, similar but also _site.yml</p>
+<p><br></p>
+<p><strong>Now let’s look at the filenames</strong>. We can recognize the names of the webpages we’ve seen, and there is also a <code>_site.yml</code> file, which is the website’s configuration file. The simplest website possible would have 2 files only: <code>_site.yml</code> and <code>index.Rmd</code></p>
+<div class="figure">
+<img src="https://docs.google.com/drawings/d/1jnXfeJ3i-fwd-t49S5FyeMAX3cJSoCYbyZLLTqFZd7w/pub?w=960&amp;h=720" />
+
+</div>
+</div>
 </div>
 <div id="fork-to-your-account-clone-to-your-computer" class="section level2">
 <h2>Fork to your account, clone to your computer</h2>
-<p>screenshot of this</p>
+<p>Let’s start digging deeper and playing with this.</p>
+<p>First, fork the <a href="https://github.com/jules32/rmarkdown-website-tutorial">jules32/rmarkdown-website-tutorial</a> repo into your own account. Then, clone to your local computer using RStudio (preferred) the <a href="https://desktop.github.com/">Desktop App</a>, or the command line.</p>
+<div class="figure">
+<img src="images/fork.png" />
+
+</div>
+</div>
+<div id="rstudio-landscape" class="section level2">
+<h2>RStudio landscape</h2>
 <p>screenshot of RStudio pane, highlight knit buttons</p>
 </div>
 <div id="markdown-syntax" class="section level2">

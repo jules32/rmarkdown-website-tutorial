@@ -1,28 +1,57 @@
 ---
-title: "First Observations"
+title: "First observations: let's start exploring"
 ---
 
-**Here's the plan**:
+With this tutorial, we have a working example website that we will explore together. We'll start our exploration online looking at the website architecture, then we'll clone the repo to our local computers. Locally, we will explore further by going back and forth between the R Markdown editor and built webpages, and make modifications. Pushing to Github will make our modifications live!    
 
-The easiest to learn from a working example, so let's explore this repo. We are going to start online, then clone the repo and explore by going back and forth between the R Markdown editor and the built pages.
+We'll also borrow heavily from [RStudio's instructions for R Markdown websites](http://rmarkdown.rstudio.com/rmarkdown_websites.html), which is highly recommended reading.
 
-## Explore first on GitHub
+----
 
-Note the url of this website: <http://jules32.github.io/rmarkdown-website-tutorial>. This means that there is a folder called `rmarkdown-website-tutorial` in `jules32`'s Github account, so let's head to <https://github.com/jules32/rmarkdown-website-tutorial>.
+## Exploring online
 
-Note: you can have github websites point to a different url you have purchased.
+<br>
 
-Notice the `gh-pages` branch
+### The website itself
+
+This website has 4 pages: 
+
+- Home
+- First Observations
+- Basic Workflow
+- Getting Sophisticated
+  
+  
+`github.io` means that there is a Github repo behind this website, and we also know the username and repo name:
+
+**<http://jules32.github.io/rmarkdown-website-tutorial>** <=> **<https://github.com/jules32/rmarkdown-website-tutorial>** 
+
+(Note: you can have github websites point to different urls if you don't want the `github.io`.)
+
+<br>
+
+### The website's repo
+
+**First, note the `gh-pages` branch** - this is critical for building free webpages. You can usually name branches whatever you want, but the `gh-pages` name means it can be built as a website. [I set it as my default branch](https://help.github.com/articles/setting-the-default-branch/).
 
 ![](images/gh-pages.png)
 
-Notice the filenames, similar but also _site.yml
+<br>
 
+**Now let's look at the filenames**. We can recognize the names of the webpages we've seen, and there is also a `_site.yml` file, which is the website's configuration file. The simplest website possible would have 2 files only: `_site.yml` and `index.Rmd`
+
+![](https://docs.google.com/drawings/d/1jnXfeJ3i-fwd-t49S5FyeMAX3cJSoCYbyZLLTqFZd7w/pub?w=960&h=720)
 
 
 ## Fork to your account, clone to your computer
 
-screenshot of this
+Let's start digging deeper and playing with this.  
+
+First, fork the [jules32/rmarkdown-website-tutorial](https://github.com/jules32/rmarkdown-website-tutorial) repo into your own account. Then, clone to your local computer using RStudio (preferred) the [Desktop App](https://desktop.github.com/), or the command line.
+
+![](images/fork.png)
+
+## RStudio landscape
 
 screenshot of RStudio pane, highlight knit buttons
  
