@@ -17,7 +17,7 @@ The best way to learn is to follow along with your own laptop, but all are welco
 1. create a [GitHub]((http://github.com)) account ([advice](http://happygitwithr.com/github-acct.html))
 1. set up your computer to talk to GitHub
     - have RStudio linked directly (preferred) ([instructions sections 8-14](http://happygitwithr.com/hello-git.html))
-    -or install the [Desktop App](https://desktop.github.com/)
+    - or install the [Desktop App](https://desktop.github.com/)
     - or be familiar with git commands for the command line ([tutorial](https://try.github.io/levels/1/challenges/1))
 
 ----
