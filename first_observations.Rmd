@@ -12,6 +12,10 @@ We'll also borrow heavily from [RStudio's instructions for R Markdown websites](
 
 <br>
 
+<!---this is an html comment that works in Markdown --->
+
+<!--- I use the <br> html tag to force carriage returns in the text--->
+
 ### The website itself
 
 This website has 4 pages: 

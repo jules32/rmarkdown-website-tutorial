@@ -11,7 +11,7 @@
 
 
 
-<title>Getting Sophisticated</title>
+<title>Time to get sophisticated</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -288,49 +288,83 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Getting Sophisticated</h1>
+<h1 class="title toc-ignore">Time to get sophisticated</h1>
 
 </div>
 
 
-<p><strong>First off</strong>, note that</p>
+<p>We’re only covering a few possibilites here; see <a href="http://rmarkdown.rstudio.com/lesson-1.html">RStudio’s R Markdown lessons</a> for the complete picture.</p>
+<p><br></p>
+<p><strong>First off</strong>, note that:</p>
 <ol style="list-style-type: decimal">
-<li>there is a table of contents, and</li>
-<li>it is floating</li>
-<li>also note that my numbering in this list renders nicely</li>
+<li>there is a table of contents there on the left, and</li>
+<li>it is floating (i.e. it follows you as you scroll down)</li>
+<li>it collapses nicely as you click it</li>
+<li><p>This is all done in the front matter:</p>
+<pre><code>output:  
+  html_document:  
+    toc: true  
+    toc_float: true  </code></pre>
+<!---also note that my numbering in this list renders nicely---></li>
 </ol>
-<div id="with-r-code" class="section level2">
-<h2>With R code</h2>
+<hr />
+<div id="r-code" class="section level2">
+<h2><code>R</code> code</h2>
 <p>You can execute R code each time you build your website. There are two ways you’ll see R code; in-line and in a chunk.</p>
 <div class="figure">
-<img src="images/markdown_rmarkdownlesson-8.png" />
+<img src="images/markdown_rmarkdownlesson-4.png" />
 
 </div>
 <div id="in-line" class="section level3">
 <h3>in line</h3>
-<p>Today’s date is 2016-12-12. It is</p>
+<p>Here is an example inline. The date when I last built the website is 2016-12-13. My favorite number is 13.1415927.</p>
 </div>
 <div id="in-a-code-chunk" class="section level3">
 <h3>in a code chunk</h3>
-<p>Plot of cars</p>
-<pre class="r"><code>plot(cars)</code></pre>
-<p><img src="getting_sophisticated_files/figure-html/plot%20cars-1.png" width="672" /></p>
+<p>And here is an example of a code chunk.</p>
 <pre class="r"><code>plot(iris$Sepal.Length)</code></pre>
-<p><img src="getting_sophisticated_files/figure-html/plot%20cars-2.png" width="672" /></p>
+<p><img src="getting_sophisticated_files/figure-html/plot%20iris-1.png" width="672" /></p>
 </div>
-<div id="with-_site.r" class="section level3">
-<h3>with <code>_site.R</code></h3>
+<div id="calling-another-file" class="section level3">
+<h3>Calling another file</h3>
+<div id="r-script" class="section level4">
+<h4>R script</h4>
+<p>You can source an R script. For example,</p>
+<pre class="r"><code>source(&quot;plot_script.R&quot;)</code></pre>
+</div>
+<div id="site.r" class="section level4">
+<h4><code>_site.R</code></h4>
+<p>Will give you ‘global variables’ that will be available across your site. Note: we’ll move</p>
+<pre class="r"><code>source(&quot;_site.R&quot;)</code></pre>
+</div>
+<div id="rmd-file" class="section level4">
+<h4>Rmd file</h4>
+<p>with <code>child='myfile.Rmd'</code></p>
+<p><br></p>
 </div>
 </div>
-<div id="styling" class="section level2">
-<h2>Styling</h2>
-<p>Disclaimer: Most of what is here I figured out through googling and trial and error…so there are most definitely better and more elegant ways to do this. But here are some ideas:</p>
-<div id="figures" class="section level3">
-<h3>figures</h3>
-<p>sizing, centering,</p>
+</div>
+<div id="simple-styling" class="section level2">
+<h2>Simple styling</h2>
+<p>Disclaimer: Most of what is here I figured out through Googling and trial and error…so there are most definitely better and more elegant ways to do this. But here are some ideas using CSS and HTML.</p>
+<div id="images" class="section level3">
+<h3>images</h3>
+<p><strong>Resize</strong> an image using HTML tags (Check out <a href="https://www.rstudio.com/resources/cheatsheets/">RStudio’s R Markdown Cheatsheet!</a>)</p>
+<p><img src="images/Rmd_cheatsheet.png" width="350px"></p>
+<p><img src="images/Rmd_cheatsheet.png" width="150px"></p>
+<p><strong>Align</strong> an image using HTML tags.</p>
+<p>Center:</p>
+<center>
+<img src="images/Rmd_cheatsheet.png" width="150px">
+</center>
+<p>Right:</p>
+<div align="right">
+<img src="images/Rmd_cheatsheet.png" width="150px">
+</div>
+<p><br></p>
 </div>
 <div id="columns" class="section level3">
-<h3>columns</h3>
+<h3>Columns</h3>
 <!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
 Put in your css file or directly in rmarkdown--->
 <style>
@@ -340,12 +374,6 @@ Put in your css file or directly in rmarkdown--->
     -moz-columns: 2 200px;    /* firefox */
   }
 </style>
-<p><br> <strong>Global Ocean Health Index assessments score 10 goals, some of which have sub-goals</strong>. Here you will find a description about how goals are represented in global assessments. Goal-by-goal, you can explore the data used to model status and trend, as well as the pressures and resilience measures contributing to goal scores.</p>
-<div class="figure">
-<img src="https://docs.google.com/drawings/d/17N97_cydibY4QM79tnVf-hLDii0NNm3VhBJ2hhkKKkM/pub?w=1344&amp;h=192" />
-
-</div>
-<hr />
 <hr />
 <div class="col2">
 <p><strong>Column 1</strong></p>
@@ -362,22 +390,39 @@ Put in your css file or directly in rmarkdown--->
 </div>
 <p><br></p>
 <center>
-<p><strong>Here the text is centered</strong></p>
-• <a href="https://github.com/OHI-Science/ohi-science.github.io/raw/master/assets/downloads/other/2016_Global_OHI_Scores_Report_compressed.pdf">2016 Global OHI Scores Report</a> • <a href="http://ohi-science.org/resources/publications/">Peer-reviewed publications</a> •
+<p><strong>Here the text is centered.</strong></p>
+• <a href="http://www.w3schools.com/tags/">w3schools.com - HTML references</a> • <a href="http://www.w3schools.com/css/">w3schools.com - CSS tutorial</a> •
 </center>
 <hr />
 </div>
 <div id="colored-text" class="section level3">
 <h3>colored text</h3>
+<p><font size="3" color="red">This is red text size 3!</font> <font size="2" color="blue">This is blue text size 2!</font> <font face="verdana" color="green">This is green text in verdana!</font></p>
 </div>
 </div>
-<div id="templatesthemes" class="section level2">
-<h2>Templates/themes</h2>
-<div id="troubleshooting" class="section level3">
-<h3>troubleshooting</h3>
-<p>If when running <code>rmarkdown::render_site()</code> you get this error:</p>
-<p>Go to <em>Session &gt; Restart R</em> and try again.</p>
+<div id="themes" class="section level2">
+<h2>Themes</h2>
+<p>We can change the website’s theme in <code>_site.yml</code>. Explore options here: <a href="http://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style" class="uri">http://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style</a>:</p>
+<blockquote>
+<p>Valid themes include “default”, “cerulean”, “journal”, “flatly”, “readable”, “spacelab”, “united”, “cosmo”, “lumen”, “paper”, “sandstone”, “simplex”, and “yeti”.</p>
+</blockquote>
 </div>
+<div id="troubleshooting" class="section level2">
+<h2>Troubleshooting</h2>
+<p>You’ll get errors as you work; this is how you learn.</p>
+<ol style="list-style-type: decimal">
+<li><p>If when running <code>rmarkdown::render_site()</code> you get this error:</p>
+<pre><code>Error in object[seq_len(ile)] : 
+object of type &#39;symbol&#39; is not subsettable</code></pre>
+<p>Go to <em>Session &gt; Restart R</em> and try again.</p></li>
+<li><p>When knitting, if you get this error:</p>
+<pre><code>Error in parse_block(g[-1], g[1], params.src) : duplicate label &#39;setup&#39;
+Calls: &lt;Anonymous&gt; ... process_file -&gt; split_file -&gt; lapply -&gt; FUN -&gt; parse_block
+Execution halted</code></pre>
+<p>Here you have 2 <code>R</code> code chunks named ‘setup’, you must change it</p></li>
+<li><p>When you get an error message you don’t understand: Copy-paste it into Google.</p></li>
+</ol>
+<p><img src="images/practicalDev_googleErrorMessage.jpg" width="350px"></p>
 </div>
 
 

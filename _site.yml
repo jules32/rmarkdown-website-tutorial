@@ -19,3 +19,4 @@ output:
 #      after_body: _footer.html
     css:
       - "_sass/main.css"
+

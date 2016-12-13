@@ -1,51 +1,101 @@
 ---
-title: "Getting Sophisticated"
+title: "Time to get sophisticated"
 output:
   html_document:
     toc: true
     toc_float: true
 ---
 
-**First off**, note that 
+We're only covering a few possibilites here; see [RStudio's R Markdown lessons](http://rmarkdown.rstudio.com/lesson-1.html) for the complete picture.
 
-1. there is a table of contents, and 
-1. it is floating
-1. also note that my numbering in this list renders nicely
+<br>
+
+**First off**, note that: 
+
+1. there is a table of contents there on the left, and 
+1. it is floating (i.e. it follows you as you scroll down)
+1. it collapses nicely as you click it
+1. This is all done in the front matter:  
+```
+    output:  
+      html_document:  
+        toc: true  
+        toc_float: true  
+```  
+<!---also note that my numbering in this list renders nicely--->
 
 
-## With R code
+----
+
+## `R` code
 
 You can execute R code each time you build your website. There are two ways you'll see R code; in-line and in a chunk. 
 
-![](images/markdown_rmarkdownlesson-8.png)
+![](images/markdown_rmarkdownlesson-4.png)
 
 ### in line
 
-Today's date is `r Sys.Date()`. It is  
+Here is an example inline. The date when I last built the website is `r Sys.Date()`. My favorite number is `r pi + 10`.
 
 ### in a code chunk
 
-Plot of cars
+And here is an example of a code chunk. 
 
-```{r plot cars}
-plot(cars)
+```{r plot iris}
 plot(iris$Sepal.Length)
 ```
 
-### with `_site.R`
+### Calling another file 
 
-```{r setup, echo=F, warning=FALSE, message=F}
-source("./advanced/_site.R")
+#### R script
+
+You can source an R script. For example, 
+
+```{r plot, echo=T, warning=FALSE, message=F}
+source("plot_script.R")
+```
+
+
+#### `_site.R`
+
+Will give you 'global variables' that will be available across your site. Note: we'll move
+
+```{r setup, eval=FALSE, warning=FALSE, message=F}
+source("_site.R")
 ```
  
-## Styling
+#### Rmd file 
 
-Disclaimer: Most of what is here I figured out through googling and trial and error...so there are most definitely better and more elegant ways to do this. But here are some ideas: 
+with `child='myfile.Rmd'`
+ 
+<br> 
 
-### figures
-sizing, centering, 
+## Simple styling
 
-### columns
+Disclaimer: Most of what is here I figured out through Googling and trial and error...so there are most definitely better and more elegant ways to do this. But here are some ideas using CSS and HTML. 
+
+### images
+
+**Resize** an image using HTML tags (Check out [RStudio's R Markdown Cheatsheet!](https://www.rstudio.com/resources/cheatsheets/))
+
+<img src="images/Rmd_cheatsheet.png" width="350px">
+
+<img src="images/Rmd_cheatsheet.png" width="150px">
+
+  
+**Align** an image using HTML tags. 
+
+Center: 
+
+<center><img src="images/Rmd_cheatsheet.png" width="150px"></center>
+
+Right: 
+
+<div align="right"><img src="images/Rmd_cheatsheet.png" width="150px"></div>
+
+<br> 
+
+### Columns
  
 <!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
 Put in your css file or directly in rmarkdown--->
@@ -57,13 +107,6 @@ Put in your css file or directly in rmarkdown--->
   }
 </style>
  
-<br> 
-**Global Ocean Health Index assessments score 10 goals, some of which have sub-goals**. Here you will find a description about how goals are represented in global assessments. Goal-by-goal, you can explore the data used to model status and trend, as well as the pressures and resilience measures contributing to goal scores.     
-
-![](https://docs.google.com/drawings/d/17N97_cydibY4QM79tnVf-hLDii0NNm3VhBJ2hhkKKkM/pub?w=1344&h=192)
-
-----
-
 -----
 
 <div class="col2">
@@ -84,9 +127,9 @@ Put in your css file or directly in rmarkdown--->
 <br>
 
 <center>
-**Here the text is centered**
+**Here the text is centered.**
 
-• [2016 Global OHI Scores Report](https://github.com/OHI-Science/ohi-science.github.io/raw/master/assets/downloads/other/2016_Global_OHI_Scores_Report_compressed.pdf) • [Peer-reviewed publications](http://ohi-science.org/resources/publications/) • 
+• [w3schools.com - HTML references](http://www.w3schools.com/tags/) • [w3schools.com - CSS tutorial](http://www.w3schools.com/css/) • 
 </center>
 
 ---- 
@@ -94,19 +137,41 @@ Put in your css file or directly in rmarkdown--->
 
 ### colored text
 
-## Templates/themes
+<font size="3" color="red">This is red text size 3!</font>
+<font size="2" color="blue">This is blue text size 2!</font>
+<font face="verdana" color="green">This is green text in verdana!</font>
 
-### troubleshooting
+## Themes
 
-If when running `rmarkdown::render_site()` you get this error: 
+We can change the website's theme in `_site.yml`. Explore options here: <http://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style>:
 
-```{r}
-# Error in object[seq_len(ile)] : 
-#  object of type 'symbol' is not subsettable
+>Valid themes include "default", "cerulean", "journal", "flatly", "readable", "spacelab",  "united", "cosmo", "lumen", "paper", "sandstone", "simplex", and "yeti". 
 
 
-```
+## Troubleshooting
+
+You'll get errors as you work; this is how you learn. 
+
+1. If when running `rmarkdown::render_site()` you get this error: 
+
+    ```
+    Error in object[seq_len(ile)] : 
+    object of type 'symbol' is not subsettable
+    ```
 Go to *Session > Restart R* and try again. 
 
+2. When knitting, if you get this error: 
+
+    ```
+    Error in parse_block(g[-1], g[1], params.src) : duplicate label 'setup'
+    Calls: <Anonymous> ... process_file -> split_file -> lapply -> FUN -> parse_block
+    Execution halted
+    ```
+Here you have 2 `R` code chunks named 'setup', you must change it
+
+
+3. When you get an error message you don't understand: Copy-paste it into Google.
+
+<img src="images/practicalDev_googleErrorMessage.jpg" width="350px">
   
 

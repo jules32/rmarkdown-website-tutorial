@@ -5,8 +5,8 @@ title: "Basic workflow"
 Building websites uses the same reproducible workflow you can use for your analyses and collaborations. It is very iterative. You can do it all from RStudio, with a combination of clicking or typing commands as you feel comfortable. 
 
 1. add content (text, code, images, etc) in an RMarkdown file
-1. knit the RMarkdown file 
-1. update `_site.yml` (perhaps)
+1. knit the RMarkdown file to view
+1. update `_site.yml` (perhaps, if it is a new file)
 1. build the website
     - Build tab > Build Website or
     - in the console: `rmarkdown::render_site()`
@@ -14,9 +14,9 @@ Building websites uses the same reproducible workflow you can use for your analy
 1. commit and push your website to github, it's live!
 1. repeat all of the above
 
-Let's see what this looks like. 
+Let's see what this looks like. We are not going to have time to learn all of the capabilities of R Markdown today, but the purpose here is to give you familiarlity with the workflow and confidence to explore further on your own.
 
-<br>
+----
 
 ## RStudio landscape
 
@@ -32,22 +32,50 @@ If we open `Index.Rmd` we will see that it's all text with a bit of formatting. 
 
 **Let's start by making sure you have the Build tab.** Install `rmarkdown` if you haven't already: 
 
-```{r setup, eval= FALSE}
+```
 install.packages('rmarkdown')
 library(rmarkdown) 
 ```
+
+<!---note that the ``` ``` syntax above renders text as a code-looking block--->
 
 <br>
  
 ## Markdown Syntax 
  
-Now let's look at a few of these files and see the Markdown syntax.  
+Now that we've had an overview of the workflow, let's look explore the first few webpages/R Markdown files to get familiar with Markdown syntax. These first few pages have simple formatting (**bold**, *italics*), headers, bullet points, links, and images. These are the majority of things you'll do in Markdown. See a full list of options at [**RStudio's Markdown basics**](http://rmarkdown.rstudio.com/authoring_basics.html) or go to Help > Markdown Quick Reference.
+
+- `index.Rmd`
+- `first_observations.Rmd`
+- `basic_workflow.Rmd`
  
 From [rmarkdown.rstudio.com lesson 8](http://rmarkdown.rstudio.com/lesson-8.html): 
 
 ![](images/markdown_rmarkdownlesson-8.png)
 
-See full list of options at [**RStudio's Markdown basics**](http://rmarkdown.rstudio.com/authoring_basics.html) or go to Help > Markdown Quick Reference
+<br>
+
+### Tips for learning Markdown
+
+**In Markdown, spaces can be tricky**.  
+To start a new line here, I needed 2 spaces after `tricky.  ` above. 
+As you can see, a simple carriage return doesn't cut it. 
+
+To force carriage returns, use the `<br>` html tag...
 
 <br>
+<br>
+
+...like this.  
+
+Also, this bulleted list won't render properly:
+- because there is no carriage return between the line above
+- and where the bullet points start. 
+
+To have the bullet points render nicely: 
+
+- you must have a full blank line 
+- following "To have the bullet points render nicely:"
+
+
 

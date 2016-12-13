@@ -199,8 +199,8 @@ $(document).ready(function () {
 <p>Building websites uses the same reproducible workflow you can use for your analyses and collaborations. It is very iterative. You can do it all from RStudio, with a combination of clicking or typing commands as you feel comfortable.</p>
 <ol style="list-style-type: decimal">
 <li>add content (text, code, images, etc) in an RMarkdown file</li>
-<li>knit the RMarkdown file</li>
-<li>update <code>_site.yml</code> (perhaps)</li>
+<li>knit the RMarkdown file to view</li>
+<li>update <code>_site.yml</code> (perhaps, if it is a new file)</li>
 <li>build the website
 <ul>
 <li>Build tab &gt; Build Website or</li>
@@ -210,8 +210,8 @@ $(document).ready(function () {
 <li>commit and push your website to github, it’s live!</li>
 <li>repeat all of the above</li>
 </ol>
-<p>Let’s see what this looks like.</p>
-<p><br></p>
+<p>Let’s see what this looks like. We are not going to have time to learn all of the capabilities of R Markdown today, but the purpose here is to give you familiarlity with the workflow and confidence to explore further on your own.</p>
+<hr />
 <div id="rstudio-landscape" class="section level2">
 <h2>RStudio landscape</h2>
 <p>Here is what you’ll see when you’ve opened our <code>rmarkdown-website-tutorial</code> project in RStudio.</p>
@@ -225,20 +225,39 @@ $(document).ready(function () {
 <div id="install-the-rmarkdown-package" class="section level2">
 <h2>Install the <code>rmarkdown</code> package</h2>
 <p><strong>Let’s start by making sure you have the Build tab.</strong> Install <code>rmarkdown</code> if you haven’t already:</p>
-<pre class="r"><code>install.packages(&#39;rmarkdown&#39;)
+<pre><code>install.packages(&#39;rmarkdown&#39;)
 library(rmarkdown) </code></pre>
+<!---note that the ``` ``` syntax above renders text as a code-looking block--->
 <p><br></p>
 </div>
 <div id="markdown-syntax" class="section level2">
 <h2>Markdown Syntax</h2>
-<p>Now let’s look at a few of these files and see the Markdown syntax.</p>
+<p>Now that we’ve had an overview of the workflow, let’s look explore the first few webpages/R Markdown files to get familiar with Markdown syntax. These first few pages have simple formatting (<strong>bold</strong>, <em>italics</em>), headers, bullet points, links, and images. These are the majority of things you’ll do in Markdown. See a full list of options at <a href="http://rmarkdown.rstudio.com/authoring_basics.html"><strong>RStudio’s Markdown basics</strong></a> or go to Help &gt; Markdown Quick Reference.</p>
+<ul>
+<li><code>index.Rmd</code></li>
+<li><code>first_observations.Rmd</code></li>
+<li><code>basic_workflow.Rmd</code></li>
+</ul>
 <p>From <a href="http://rmarkdown.rstudio.com/lesson-8.html">rmarkdown.rstudio.com lesson 8</a>:</p>
 <div class="figure">
 <img src="images/markdown_rmarkdownlesson-8.png" />
 
 </div>
-<p>See full list of options at <a href="http://rmarkdown.rstudio.com/authoring_basics.html"><strong>RStudio’s Markdown basics</strong></a> or go to Help &gt; Markdown Quick Reference</p>
 <p><br></p>
+<div id="tips-for-learning-markdown" class="section level3">
+<h3>Tips for learning Markdown</h3>
+<p><strong>In Markdown, spaces can be tricky</strong>.<br />
+To start a new line here, I needed 2 spaces after <code>tricky.</code> above. As you can see, a simple carriage return doesn’t cut it.</p>
+<p>To force carriage returns, use the <code>&lt;br&gt;</code> html tag…</p>
+<p><br> <br></p>
+<p>…like this.</p>
+<p>Also, this bulleted list won’t render properly: - because there is no carriage return between the line above - and where the bullet points start.</p>
+<p>To have the bullet points render nicely:</p>
+<ul>
+<li>you must have a full blank line</li>
+<li>following “To have the bullet points render nicely:”</li>
+</ul>
+</div>
 </div>
 
 

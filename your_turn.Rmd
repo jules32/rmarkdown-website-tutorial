@@ -12,15 +12,13 @@ As the image above suggests, this is going to be iterative. Try changing a few t
 
 <br> 
 
-## Change the website's theme
-
-Try changing the website's theme in your `_site.yml`. Explore options here: <http://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style>:
-
->Valid themes include "default", "cerulean", "journal", "flatly", "readable", "spacelab",  "united", "cosmo", "lumen", "paper", "sandstone", "simplex", and "yeti". 
-
-<br> 
-
 ### Add a new page
+
+<br>
+
+### Move `_site.R`
+
+`_site.R` should be in the main repo folder, not in the advanced folder. Move it there and update all filepaths that depend on it (e.g. look in `getting_sophisticated.Rmd` or try to build).
 
 <br> 
 

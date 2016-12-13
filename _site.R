@@ -5,7 +5,7 @@ suppressPackageStartupMessages({
 })
 
 ## variables I need for my site 
-data <- readr::read_csv('advanced/important_data.csv')
+data <- readr::read_csv('important_data.csv')
 
 
 ## global default knitr options
