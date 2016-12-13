@@ -305,11 +305,10 @@ div.tocify {
 
 <p>We’re only covering a few possibilites here; see <a href="http://rmarkdown.rstudio.com/lesson-1.html">RStudio’s R Markdown lessons</a> for the complete picture.</p>
 <p><br></p>
-<p><strong>First off</strong>, note that:</p>
+<p><strong>First off</strong>, note that on this page:</p>
 <ol style="list-style-type: decimal">
-<li>there is a table of contents there on the left, and</li>
-<li>it is floating (i.e. it follows you as you scroll down)</li>
-<li>it collapses nicely as you click it</li>
+<li>there is a Table of Contents (TOC) there on the left, and</li>
+<li>it is floating (i.e. it follows you as you scroll down and expands/collapses nicely as you click)</li>
 <li><p>This is all done in the front matter:</p>
 <pre><code>output:  
   html_document:  
@@ -323,15 +322,15 @@ div.tocify {
 <p>Disclaimer: Most of what is here I figured out through Googling and trial and error…so there are most definitely better and more elegant ways to do this. But here are some ideas using CSS and HTML.</p>
 <div id="images" class="section level3">
 <h3>images</h3>
-<p><strong>Resize</strong> an image using HTML tags (Check out <a href="https://www.rstudio.com/resources/cheatsheets/">RStudio’s R Markdown Cheatsheet!</a>)</p>
+<p><strong>Resize</strong> an image using HTML tags (side note: check out <a href="https://www.rstudio.com/resources/cheatsheets/">RStudio’s R Markdown Cheatsheet</a>):</p>
 <p><img src="images/Rmd_cheatsheet.png" width="350px"></p>
 <p><img src="images/Rmd_cheatsheet.png" width="150px"></p>
-<p><strong>Align</strong> an image using HTML tags.</p>
-<p>Center:</p>
+<p><strong>Align</strong> an image using HTML tags:</p>
+<p><code>&lt;center&gt; and &lt;/center&gt;:</code></p>
 <center>
 <img src="images/Rmd_cheatsheet.png" width="150px">
 </center>
-<p>Right:</p>
+<p><code>&lt;div align=&quot;right&quot;&gt; and &lt;/div&gt;:</code></p>
 <div align="right">
 <img src="images/Rmd_cheatsheet.png" width="150px">
 </div>
@@ -348,7 +347,6 @@ Put in your css file or directly in rmarkdown--->
     -moz-columns: 2 200px;    /* firefox */
   }
 </style>
-<hr />
 <div class="col2">
 <p><strong>Column 1</strong></p>
 <ul>
@@ -364,14 +362,18 @@ Put in your css file or directly in rmarkdown--->
 </div>
 <p><br></p>
 <center>
-<p><strong>Here the text is centered.</strong></p>
+<p><strong>Here the text is centered. Here are good resources:</strong></p>
 • <a href="http://www.w3schools.com/tags/">w3schools.com - HTML references</a> • <a href="http://www.w3schools.com/css/">w3schools.com - CSS tutorial</a> •
 </center>
-<hr />
+<p><br></p>
 </div>
 <div id="colored-text" class="section level3">
 <h3>colored text</h3>
-<p><font size="3" color="red">This is red text size 3!</font> <font size="2" color="blue">This is blue text size 2!</font> <font face="verdana" color="green">This is green text in verdana!</font></p>
+<p><code>&lt;font&gt; and &lt;/font&gt;</code></p>
+<p><font size="3" color="red">This is red text size 3!</font><br />
+<font size="2" color="blue">This is blue text size 2!</font><br />
+<font face="verdana" color="green">This is green text in verdana!</font></p>
+<hr />
 </div>
 </div>
 <div id="themes" class="section level2">
@@ -380,22 +382,26 @@ Put in your css file or directly in rmarkdown--->
 <blockquote>
 <p>Valid themes include “default”, “cerulean”, “journal”, “flatly”, “readable”, “spacelab”, “united”, “cosmo”, “lumen”, “paper”, “sandstone”, “simplex”, and “yeti”.</p>
 </blockquote>
+<hr />
 </div>
 <div id="r-code" class="section level2">
 <h2><code>R</code> code</h2>
-<p>You can execute R code each time you build your website. There are two ways you’ll see R code; in-line and in a chunk.</p>
+<p>You can execute R code each time you build your website. Even if you don’t yet know R, this is a little taste of the types of things you can do. There are two ways you’ll see R code; in-line and in a code chunk.</p>
 <div class="figure">
 <img src="images/markdown_rmarkdownlesson-4.png" />
 
 </div>
+<p><br></p>
 <div id="in-line" class="section level3">
 <h3>in line</h3>
-<p>Here is an example inline. The date when I last built the website is 2016-12-13. My favorite number is 13.1415927.</p>
+<p>Here is an example inline. The date when I last built the website is 2016-12-13. My favorite number is 13.1415927. There are 19 files and folders in our repo. This is not just text; his is executable R code that is 100% awesome!</p>
+<p><br></p>
 </div>
 <div id="in-a-code-chunk" class="section level3">
 <h3>in a code chunk</h3>
-<p>And here is an example of a code chunk.</p>
-<pre class="r"><code>plot(iris$Sepal.Length)</code></pre>
+<p>And here is an example of a code chunk. Let’s plot the first bit of an <code>iris</code> variable (which is a dataset that comes with base R).</p>
+<pre class="r"><code>x &lt;- iris$Sepal.Length[1:15]
+plot(x)</code></pre>
 <p><img src="getting_sophisticated_files/figure-html/plot%20iris-1.png" width="672" /></p>
 </div>
 <div id="calling-another-file" class="section level3">
@@ -403,30 +409,35 @@ Put in your css file or directly in rmarkdown--->
 <div id="r-script" class="section level4">
 <h4><code>R</code> script</h4>
 <p>You can source an R script. For example,</p>
-<pre class="r"><code>source(&quot;plot_script.R&quot;)</code></pre>
+<pre class="r"><code>## source an external script
+source(&quot;advanced/my_script.R&quot;)
+
+## plot the `data_from_my_script` variable, which is data from `my_script.R`
+ggplot(data = data_from_my_script, aes(x = year, y = pop)) + 
+  geom_point() + 
+  labs(title = data_from_my_script$country)</code></pre>
+<p><img src="getting_sophisticated_files/figure-html/plot-1.png" width="672" /></p>
 <p><br></p>
 </div>
 <div id="site.r" class="section level4">
 <h4><code>_site.R</code></h4>
-<p>Will give you ‘global variables’ that will be available across your site. Note: we’ll move</p>
+<p>Will give you ‘global variables’ that will be available across your site.</p>
 <pre class="r"><code>source(&quot;_site.R&quot;)</code></pre>
 <p><br></p>
 </div>
 <div id="rmd-file" class="section level4">
 <h4><code>Rmd</code> file</h4>
-<p>with <code>child='myfile.Rmd'</code></p>
-<div id="rounding-pi" class="section level5">
-<h5>Rounding pi</h5>
-<p>This is our example R Markdown document. It has incredibly important information!</p>
-<pre class="r"><code>round(pi)</code></pre>
-<pre><code>## [1] 3</code></pre>
-</div>
+<p>You can insert separate R Markdown files by identifying a ‘child’ file to this ’parent file. In the code chunk below, we’ll say <code>{r, child='advanced/important_example.Rmd'}</code>. This will insert our important example seamlessly and is a super powerful way to reduce copy-pasting in your analyses.</p>
+<p>This text comes from a separate R Markdown file that I inserted by knitting it as a child of the parent website’s .Rmd – how would you ever know that this is a separate file!</p>
+<p>Here is something important: if you round 3.1415927 you get 3.</p>
+<p>This is the end of this separate and important R Markdown child file.</p>
+<p><br></p>
 </div>
 </div>
 </div>
 <div id="troubleshooting" class="section level2">
 <h2>Troubleshooting</h2>
-<p>You’ll get errors as you work; this is how you learn.</p>
+<p>You’ll get errors as you work; this is how you learn. These are a few things you may encounter:</p>
 <ol style="list-style-type: decimal">
 <li><p>If when running <code>rmarkdown::render_site()</code> you get this error:</p>
 <pre><code>Error in object[seq_len(ile)] : 
@@ -436,10 +447,12 @@ object of type &#39;symbol&#39; is not subsettable</code></pre>
 <pre><code>Error in parse_block(g[-1], g[1], params.src) : duplicate label &#39;setup&#39;
 Calls: &lt;Anonymous&gt; ... process_file -&gt; split_file -&gt; lapply -&gt; FUN -&gt; parse_block
 Execution halted</code></pre>
-<p>Here you have 2 <code>R</code> code chunks named ‘setup’, you must change it</p></li>
+<p>Here you have 2 <code>R</code> code chunks named the same thing (in this case ‘setup’), you must change one of them because there cannot be two code chunks with the same name.</p></li>
 <li><p>When you get an error message you don’t understand: Copy-paste it into Google.</p></li>
 </ol>
-<p><img src="images/practicalDev_googleErrorMessage.jpg" width="350px"></p>
+<center>
+<img src="images/practicalDev_googleErrorMessage.jpg" width="350px">
+</center>
 </div>
 
 

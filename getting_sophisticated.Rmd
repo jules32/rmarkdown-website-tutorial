@@ -10,11 +10,10 @@ We're only covering a few possibilites here; see [RStudio's R Markdown lessons](
 
 <br>
 
-**First off**, note that: 
+**First off**, note that on this page: 
 
-1. there is a table of contents there on the left, and 
-1. it is floating (i.e. it follows you as you scroll down)
-1. it collapses nicely as you click it
+1. there is a Table of Contents (TOC) there on the left, and 
+1. it is floating (i.e. it follows you as you scroll down and expands/collapses nicely as you click)
 1. This is all done in the front matter:  
 ```
     output:  
@@ -33,24 +32,25 @@ Disclaimer: Most of what is here I figured out through Googling and trial and er
 
 ### images
 
-**Resize** an image using HTML tags (Check out [RStudio's R Markdown Cheatsheet!](https://www.rstudio.com/resources/cheatsheets/))
+**Resize** an image using HTML tags (side note: check out [RStudio's R Markdown Cheatsheet](https://www.rstudio.com/resources/cheatsheets/)):
 
 <img src="images/Rmd_cheatsheet.png" width="350px">
 
 <img src="images/Rmd_cheatsheet.png" width="150px">
 
   
-**Align** an image using HTML tags. 
+**Align** an image using HTML tags: 
 
-Center: 
+`<center> and </center>:` 
 
 <center><img src="images/Rmd_cheatsheet.png" width="150px"></center>
 
-Right: 
+`<div align="right"> and </div>:`
 
 <div align="right"><img src="images/Rmd_cheatsheet.png" width="150px"></div>
 
 <br> 
+
 
 ### columns
  
@@ -64,7 +64,6 @@ Put in your css file or directly in rmarkdown--->
   }
 </style>
  
------
 
 <div class="col2">
 **Column 1**
@@ -84,19 +83,22 @@ Put in your css file or directly in rmarkdown--->
 <br>
 
 <center>
-**Here the text is centered.**
+**Here the text is centered. Here are good resources:**
 
 • [w3schools.com - HTML references](http://www.w3schools.com/tags/) • [w3schools.com - CSS tutorial](http://www.w3schools.com/css/) • 
 </center>
 
----- 
-
+<br>
 
 ### colored text
 
-<font size="3" color="red">This is red text size 3!</font>
-<font size="2" color="blue">This is blue text size 2!</font>
+`<font> and </font>`
+
+<font size="3" color="red">This is red text size 3!</font>  
+<font size="2" color="blue">This is blue text size 2!</font>  
 <font face="verdana" color="green">This is green text in verdana!</font>
+
+---- 
 
 ## Themes
 
@@ -104,22 +106,29 @@ We can change the website's theme in `_site.yml`. Explore options here: <http://
 
 >Valid themes include "default", "cerulean", "journal", "flatly", "readable", "spacelab",  "united", "cosmo", "lumen", "paper", "sandstone", "simplex", and "yeti". 
 
+----
+
 ## `R` code
 
-You can execute R code each time you build your website. There are two ways you'll see R code; in-line and in a chunk. 
+You can execute R code each time you build your website. Even if you don't yet know R, this is a little taste of the types of things you can do. There are two ways you'll see R code; in-line and in a code chunk. 
 
 ![](images/markdown_rmarkdownlesson-4.png)
 
+<br>
+
 ### in line
 
-Here is an example inline. The date when I last built the website is `r Sys.Date()`. My favorite number is `r pi + 10`.
+Here is an example inline. The date when I last built the website is `r Sys.Date()`. My favorite number is `r pi + 10`. There are `r length(list.files())` files and folders in our repo. This is not just text; his is executable R code that is `r 10 * 10`% awesome!
+
+<br>
 
 ### in a code chunk
 
-And here is an example of a code chunk. 
+And here is an example of a code chunk. Let's plot the first bit of an `iris` variable (which is a dataset that comes with base R). 
 
 ```{r plot iris}
-plot(iris$Sepal.Length)
+x <- iris$Sepal.Length[1:15]
+plot(x)
 ```
 
 ### calling another file 
@@ -129,14 +138,20 @@ plot(iris$Sepal.Length)
 You can source an R script. For example, 
 
 ```{r plot, echo=T, warning=FALSE, message=F}
-source("advanced/plot_script.R")
+## source an external script
+source("advanced/my_script.R")
+
+## plot the `data_from_my_script` variable, which is data from `my_script.R`
+ggplot(data = data_from_my_script, aes(x = year, y = pop)) + 
+  geom_point() + 
+  labs(title = data_from_my_script$country)
 ```
 
 <br>
 
 #### `_site.R`
 
-Will give you 'global variables' that will be available across your site. Note: we'll move
+Will give you 'global variables' that will be available across your site.
 
 ```{r _site.R, eval=FALSE, warning=FALSE, message=F}
 source("_site.R")
@@ -146,17 +161,16 @@ source("_site.R")
 
 #### `Rmd` file 
 
-with `child='myfile.Rmd'`
+You can insert separate R Markdown files by identifying a 'child' file to this 'parent file. In the code chunk below, we'll say `{r, child='advanced/important_example.Rmd'}`. This will insert our important example seamlessly and is a super powerful way to reduce copy-pasting in your analyses.
 
 ```{r, child='advanced/important_example.Rmd'}
-
 ```
  
-
+<br>
 
 ## Troubleshooting
 
-You'll get errors as you work; this is how you learn. 
+You'll get errors as you work; this is how you learn. These are a few things you may encounter: 
 
 1. If when running `rmarkdown::render_site()` you get this error: 
 
@@ -173,11 +187,11 @@ Go to *Session > Restart R* and try again.
     Calls: <Anonymous> ... process_file -> split_file -> lapply -> FUN -> parse_block
     Execution halted
     ```
-Here you have 2 `R` code chunks named 'setup', you must change it
+Here you have 2 `R` code chunks named the same thing (in this case 'setup'), you must change one of them because there cannot be two code chunks with the same name.
 
 
 3. When you get an error message you don't understand: Copy-paste it into Google.
 
-<img src="images/practicalDev_googleErrorMessage.jpg" width="350px">
+<center><img src="images/practicalDev_googleErrorMessage.jpg" width="350px"></center>
   
 

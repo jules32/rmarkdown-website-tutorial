@@ -8,6 +8,6 @@ suppressPackageStartupMessages({
 data <- readr::read_csv('important_data.csv')
 
 
-## global default knitr options
+## knitr options I want set as default for all ('global') code chunks
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 

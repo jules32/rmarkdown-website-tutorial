@@ -1,4 +1,4 @@
-## Plot Gapminder data for a country
+## Filter the Gapminder dataset for a specific country
 
 ## setup
 library(tidyverse) # install.packages('tidyverse')
@@ -6,12 +6,8 @@ library(gapminder) # install.packages('gapminder')
 
 summary(gapminder)
 
-d <- gapminder %>%
+data_from_my_script <- gapminder %>%
   filter(country == 'Germany')
-
-ggplot(data = d, aes(x = year, y = pop)) + 
-  geom_point() + 
-  labs(title = d$country)
 
 
 

@@ -22,9 +22,9 @@ Let's see what this looks like. We are not going to have time to learn all of th
 
 Here is what you'll see when you've opened our `rmarkdown-website-tutorial` project in RStudio.  
 
-The 'Build tab' will show up once RStudio knows your files can build a website, don't worry if you don't have it yet.  
+The 'Build tab' in the top right corner will show up once RStudio knows you're making a website, don't worry if you don't have it yet.  
 
-If we open `Index.Rmd` we will see that it's all text with a bit of formatting. This top part is called the 'front matter'.  
+If we open `index.Rmd` we will see that it's all text with a bit of formatting. This top part is called the 'front matter'.  
 
 ![](https://docs.google.com/drawings/d/1ff_I5VJAtmF0FYZOIFE6ZW_-8sfwfoOij2AR0eyFs00/pub?w=960&h=720)
 
@@ -43,11 +43,13 @@ library(rmarkdown)
  
 ## Markdown Syntax 
  
-Now that we've had an overview of the workflow, let's look explore the first few webpages/R Markdown files to get familiar with Markdown syntax. These first few pages have simple formatting (**bold**, *italics*), headers, bullet points, links, and images. These are the majority of things you'll do in Markdown. See a full list of options at [**RStudio's Markdown basics**](http://rmarkdown.rstudio.com/authoring_basics.html) or go to Help > Markdown Quick Reference.
+Now let's look explore the first few webpages/R Markdown files to get familiar with Markdown syntax: 
 
 - `index.Rmd`
 - `first_observations.Rmd`
 - `basic_workflow.Rmd`
+
+These first few pages have simple formatting (**bold**, *italics*), headers, bullet points, links, and images. These are the majority of things you'll do in Markdown. See a full list of options at [**RStudio's Markdown basics**](http://rmarkdown.rstudio.com/authoring_basics.html) or go to Help > Markdown Quick Reference.  
 
 Notice that you can insert images locally (from the /images folder), or from online e.g. Google Drawings!
  
