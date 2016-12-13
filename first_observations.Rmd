@@ -51,18 +51,7 @@ First, fork the [jules32/rmarkdown-website-tutorial](https://github.com/jules32/
 
 ![](images/fork.png)
 
-## RStudio landscape
 
-screenshot of RStudio pane, highlight knit buttons
- 
- 
-## Markdown Syntax 
- 
-screenshot garrett
-
-## 'Front matter'
-
-yaml
 
 
 

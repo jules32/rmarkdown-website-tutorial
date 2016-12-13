@@ -10,13 +10,27 @@ output:
 
 As the image above suggests, this is going to be iterative. Try changing a few things and reknitting a single page or rebuilding the whole site. Do your own thing, or here are a few things to try: 
 
+<br> 
+
 ## Change the website's theme
+
+Try changing the website's theme in your `_site.yml`. Explore options here: <http://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style>:
+
+>Valid themes include "default", "cerulean", "journal", "flatly", "readable", "spacelab",  "united", "cosmo", "lumen", "paper", "sandstone", "simplex", and "yeti". 
+
+<br> 
 
 ### Add a new page
 
+<br> 
+
 ### Center an image
 
+<br> 
+
 ### Add three columns
+
+<br> 
 
 ### Add a footer
 

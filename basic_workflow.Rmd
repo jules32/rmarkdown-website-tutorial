@@ -2,6 +2,52 @@
 title: "Basic workflow"
 ---
 
-```{r setup}
-library(rmarkdown) # install.packages('rmarkdown')
+Building websites uses the same reproducible workflow you can use for your analyses and collaborations. It is very iterative. You can do it all from RStudio, with a combination of clicking or typing commands as you feel comfortable. 
+
+1. add content (text, code, images, etc) in an RMarkdown file
+1. knit the RMarkdown file 
+1. update `_site.yml` (perhaps)
+1. build the website
+    - Build tab > Build Website or
+    - in the console: `rmarkdown::render_site()`
+1. repeat, repeat, repeat
+1. commit and push your website to github, it's live!
+1. repeat all of the above
+
+Let's see what this looks like. 
+
+<br>
+
+## RStudio landscape
+
+Here is what you'll see when you've opened our `rmarkdown-website-tutorial` project in RStudio.  
+
+The 'Build tab' will show up once RStudio knows your files can build a website, don't worry if you don't have it yet.  
+
+If we open `Index.Rmd` we will see that it's all text with a bit of formatting. This top part is called the 'front matter'.  
+
+![](https://docs.google.com/drawings/d/1ff_I5VJAtmF0FYZOIFE6ZW_-8sfwfoOij2AR0eyFs00/pub?w=960&h=720)
+
+## Install the `rmarkdown` package
+
+**Let's start by making sure you have the Build tab.** Install `rmarkdown` if you haven't already: 
+
+```{r setup, eval= FALSE}
+install.packages('rmarkdown')
+library(rmarkdown) 
 ```
+
+<br>
+ 
+## Markdown Syntax 
+ 
+Now let's look at a few of these files and see the Markdown syntax.  
+ 
+From [rmarkdown.rstudio.com lesson 8](http://rmarkdown.rstudio.com/lesson-8.html): 
+
+![](images/markdown_rmarkdownlesson-8.png)
+
+See full list of options at [**RStudio's Markdown basics**](http://rmarkdown.rstudio.com/authoring_basics.html) or go to Help > Markdown Quick Reference
+
+<br>
+

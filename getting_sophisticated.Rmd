@@ -15,13 +15,15 @@ output:
 
 ## With R code
 
-You can execute R code each time you build your website. 
+You can execute R code each time you build your website. There are two ways you'll see R code; in-line and in a chunk. 
+
+![](images/markdown_rmarkdownlesson-8.png)
 
 ### in line
 
 Today's date is `r Sys.Date()`. It is  
 
-### in a chunk
+### in a code chunk
 
 Plot of cars
 
