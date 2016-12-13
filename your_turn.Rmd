@@ -1,0 +1,25 @@
+---
+title: "Now it's your turn"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+<img src="images/practicalDev_changingstuff.jpg" width="350px">
+
+As the image above suggests, this is going to be iterative. Try changing a few things and reknitting a single page or rebuilding the whole site. Do your own thing, or here are a few things to try: 
+
+## Change the website's theme
+
+### Add a new page
+
+### Center an image
+
+### Add three columns
+
+### Add a footer
+
+1. move `./advanced/_footer.html` to `./_footer.html` (or create a new one)
+2. uncomment 
+

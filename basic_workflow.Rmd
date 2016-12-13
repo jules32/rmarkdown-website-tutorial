@@ -1,4 +1,7 @@
 ---
 title: "Basic workflow"
 ---
-ah need something here
+
+```{r setup}
+library(rmarkdown) # install.packages('rmarkdown')
+```

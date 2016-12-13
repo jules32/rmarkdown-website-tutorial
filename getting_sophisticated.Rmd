@@ -27,7 +27,7 @@ Plot of cars
 
 ```{r plot cars}
 plot(cars)
-plot(iris3)
+plot(iris$Sepal.Length)
 ```
 
 ### with `_site.R`
