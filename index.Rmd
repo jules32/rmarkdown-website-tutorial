@@ -10,7 +10,7 @@ output:
 
 It's possible to create well-designed websites for free using [RStudio's R Markdown](http://rmarkdown.rstudio.com/) and hosting them on [Github](http://github.com). This is very new and incredibly cool. It is a really powerful way to communicate science using the same reproducible workflow you use for your analyses and collaborations.
 
-***Creating websites with R Markdown can be done without knowing R or HTML, CSS, etc,*** and that's where we'll start. However, R Markdown integrates with these tools so the more you know the more complex and beautiful your website can be; we'll see examples of that too. 
+***Creating websites with R Markdown can be done without knowing R or HTML, CSS, etc,*** and that's where we'll start. However, R Markdown integrates with these tools so the more you know the more complex and beautiful your website can be. This tutorial borrows heavily from a lot of great tutorials and resources you should check out too -- there are links throughout. 
 
 The best way to learn is to follow along with your own laptop, but all are welcome. We'll spend half the time with the tutorial and half the time for you to work on your own website and get help. If you bring your laptop please do this beforehand: 
 
@@ -24,7 +24,7 @@ The best way to learn is to follow along with your own laptop, but all are welco
 ----
 
 
-**Example:**
+**Examples:**
 
-We have been using R Markdown for the Ocean Health Index. We created [**ohi-science.org/ohi-global**](http://ohi-science.org/ohi-global) with R Markdown alone. 
+We have been using R Markdown for the Ocean Health Index:  [**ohi-science.org/ohi-global**](http://ohi-science.org/ohi-global).  
 And R Markdown is much more than just websites -- here's a [**one-minute video about R Markdown**](http://rmarkdown.rstudio.com/lesson-1.html) to get you excited. 

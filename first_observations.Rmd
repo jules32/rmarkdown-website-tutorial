@@ -1,5 +1,5 @@
 ---
-title: "First observations: let's start exploring"
+title: "First observations"
 ---
 
 With this tutorial, we have a working example website that we will explore together. We'll start our exploration online looking at the website architecture, then we'll clone the repo to our local computers. Locally, we will explore further by going back and forth between the R Markdown editor and built webpages, and make modifications. Pushing to Github will make our modifications live!    
@@ -37,6 +37,8 @@ This website has 5 pages:
 
 ### The website's repo
 
+Let's go to **<https://github.com/jules32/rmarkdown-website-tutorial>**.  
+  
 **First, note the `gh-pages` branch** - this is critical for building free webpages. You can usually name branches whatever you want, but the `gh-pages` name means it can be built as a website. [I set it as my default branch](https://help.github.com/articles/setting-the-default-branch/).
 
 ![](images/gh-pages.png)

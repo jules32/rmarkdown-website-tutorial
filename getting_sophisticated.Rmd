@@ -129,7 +129,7 @@ plot(iris$Sepal.Length)
 You can source an R script. For example, 
 
 ```{r plot, echo=T, warning=FALSE, message=F}
-source("plot_script.R")
+source("advanced/plot_script.R")
 ```
 
 <br>
