@@ -27,49 +27,6 @@ We're only covering a few possibilites here; see [RStudio's R Markdown lessons](
 
 ----
 
-## `R` code
-
-You can execute R code each time you build your website. There are two ways you'll see R code; in-line and in a chunk. 
-
-![](images/markdown_rmarkdownlesson-4.png)
-
-### in line
-
-Here is an example inline. The date when I last built the website is `r Sys.Date()`. My favorite number is `r pi + 10`.
-
-### in a code chunk
-
-And here is an example of a code chunk. 
-
-```{r plot iris}
-plot(iris$Sepal.Length)
-```
-
-### Calling another file 
-
-#### R script
-
-You can source an R script. For example, 
-
-```{r plot, echo=T, warning=FALSE, message=F}
-source("plot_script.R")
-```
-
-
-#### `_site.R`
-
-Will give you 'global variables' that will be available across your site. Note: we'll move
-
-```{r setup, eval=FALSE, warning=FALSE, message=F}
-source("_site.R")
-```
- 
-#### Rmd file 
-
-with `child='myfile.Rmd'`
- 
-<br> 
-
 ## Simple styling
 
 Disclaimer: Most of what is here I figured out through Googling and trial and error...so there are most definitely better and more elegant ways to do this. But here are some ideas using CSS and HTML. 
@@ -95,7 +52,7 @@ Right:
 
 <br> 
 
-### Columns
+### columns
  
 <!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
 Put in your css file or directly in rmarkdown--->
@@ -146,6 +103,55 @@ Put in your css file or directly in rmarkdown--->
 We can change the website's theme in `_site.yml`. Explore options here: <http://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style>:
 
 >Valid themes include "default", "cerulean", "journal", "flatly", "readable", "spacelab",  "united", "cosmo", "lumen", "paper", "sandstone", "simplex", and "yeti". 
+
+## `R` code
+
+You can execute R code each time you build your website. There are two ways you'll see R code; in-line and in a chunk. 
+
+![](images/markdown_rmarkdownlesson-4.png)
+
+### in line
+
+Here is an example inline. The date when I last built the website is `r Sys.Date()`. My favorite number is `r pi + 10`.
+
+### in a code chunk
+
+And here is an example of a code chunk. 
+
+```{r plot iris}
+plot(iris$Sepal.Length)
+```
+
+### calling another file 
+
+#### `R` script
+
+You can source an R script. For example, 
+
+```{r plot, echo=T, warning=FALSE, message=F}
+source("plot_script.R")
+```
+
+<br>
+
+#### `_site.R`
+
+Will give you 'global variables' that will be available across your site. Note: we'll move
+
+```{r _site.R, eval=FALSE, warning=FALSE, message=F}
+source("_site.R")
+```
+ 
+<br>
+
+#### `Rmd` file 
+
+with `child='myfile.Rmd'`
+
+```{r, child='advanced/important_example.Rmd'}
+
+```
+ 
 
 
 ## Troubleshooting

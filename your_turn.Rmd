@@ -6,7 +6,10 @@ output:
     toc_float: true
 ---
 
-<img src="images/practicalDev_changingstuff.jpg" width="350px">
+<br>
+
+<center><img src="images/practicalDev_changingstuff.jpg" width="350px"></center>  
+
 
 As the image above suggests, this is going to be iterative. Try changing a few things and reknitting a single page or rebuilding the whole site. Do your own thing, or here are a few things to try: 
 
@@ -14,17 +17,9 @@ As the image above suggests, this is going to be iterative. Try changing a few t
 
 ### Add a new page
 
+You'll need to add it to the nav bar in `_site.yml` too.
+
 <br>
-
-### Move `_site.R`
-
-`_site.R` should be in the main repo folder, not in the advanced folder. Move it there and update all filepaths that depend on it (e.g. look in `getting_sophisticated.Rmd` or try to build).
-
-<br> 
-
-### Center an image
-
-<br> 
 
 ### Add three columns
 
@@ -33,5 +28,5 @@ As the image above suggests, this is going to be iterative. Try changing a few t
 ### Add a footer
 
 1. move `./advanced/_footer.html` to `./_footer.html` (or create a new one)
-2. uncomment 
+2. uncomment in `_site.yml`
 

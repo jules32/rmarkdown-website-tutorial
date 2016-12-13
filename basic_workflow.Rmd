@@ -48,6 +48,8 @@ Now that we've had an overview of the workflow, let's look explore the first few
 - `index.Rmd`
 - `first_observations.Rmd`
 - `basic_workflow.Rmd`
+
+Notice that you can insert images locally (from the /images folder), or from online e.g. Google Drawings!
  
 From [rmarkdown.rstudio.com lesson 8](http://rmarkdown.rstudio.com/lesson-8.html): 
 

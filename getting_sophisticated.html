@@ -70,7 +70,6 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="_sass/main.css" type="text/css" />
 
 </head>
 
@@ -308,42 +307,6 @@ div.tocify {
 <!---also note that my numbering in this list renders nicely---></li>
 </ol>
 <hr />
-<div id="r-code" class="section level2">
-<h2><code>R</code> code</h2>
-<p>You can execute R code each time you build your website. There are two ways you’ll see R code; in-line and in a chunk.</p>
-<div class="figure">
-<img src="images/markdown_rmarkdownlesson-4.png" />
-
-</div>
-<div id="in-line" class="section level3">
-<h3>in line</h3>
-<p>Here is an example inline. The date when I last built the website is 2016-12-13. My favorite number is 13.1415927.</p>
-</div>
-<div id="in-a-code-chunk" class="section level3">
-<h3>in a code chunk</h3>
-<p>And here is an example of a code chunk.</p>
-<pre class="r"><code>plot(iris$Sepal.Length)</code></pre>
-<p><img src="getting_sophisticated_files/figure-html/plot%20iris-1.png" width="672" /></p>
-</div>
-<div id="calling-another-file" class="section level3">
-<h3>Calling another file</h3>
-<div id="r-script" class="section level4">
-<h4>R script</h4>
-<p>You can source an R script. For example,</p>
-<pre class="r"><code>source(&quot;plot_script.R&quot;)</code></pre>
-</div>
-<div id="site.r" class="section level4">
-<h4><code>_site.R</code></h4>
-<p>Will give you ‘global variables’ that will be available across your site. Note: we’ll move</p>
-<pre class="r"><code>source(&quot;_site.R&quot;)</code></pre>
-</div>
-<div id="rmd-file" class="section level4">
-<h4>Rmd file</h4>
-<p>with <code>child='myfile.Rmd'</code></p>
-<p><br></p>
-</div>
-</div>
-</div>
 <div id="simple-styling" class="section level2">
 <h2>Simple styling</h2>
 <p>Disclaimer: Most of what is here I figured out through Googling and trial and error…so there are most definitely better and more elegant ways to do this. But here are some ideas using CSS and HTML.</p>
@@ -364,7 +327,7 @@ div.tocify {
 <p><br></p>
 </div>
 <div id="columns" class="section level3">
-<h3>Columns</h3>
+<h3>columns</h3>
 <!---From http://stackoverflow.com/questions/31753897/2-column-section-in-r-markdown:
 Put in your css file or directly in rmarkdown--->
 <style>
@@ -406,6 +369,49 @@ Put in your css file or directly in rmarkdown--->
 <blockquote>
 <p>Valid themes include “default”, “cerulean”, “journal”, “flatly”, “readable”, “spacelab”, “united”, “cosmo”, “lumen”, “paper”, “sandstone”, “simplex”, and “yeti”.</p>
 </blockquote>
+</div>
+<div id="r-code" class="section level2">
+<h2><code>R</code> code</h2>
+<p>You can execute R code each time you build your website. There are two ways you’ll see R code; in-line and in a chunk.</p>
+<div class="figure">
+<img src="images/markdown_rmarkdownlesson-4.png" />
+
+</div>
+<div id="in-line" class="section level3">
+<h3>in line</h3>
+<p>Here is an example inline. The date when I last built the website is 2016-12-13. My favorite number is 13.1415927.</p>
+</div>
+<div id="in-a-code-chunk" class="section level3">
+<h3>in a code chunk</h3>
+<p>And here is an example of a code chunk.</p>
+<pre class="r"><code>plot(iris$Sepal.Length)</code></pre>
+<p><img src="getting_sophisticated_files/figure-html/plot%20iris-1.png" width="672" /></p>
+</div>
+<div id="calling-another-file" class="section level3">
+<h3>calling another file</h3>
+<div id="r-script" class="section level4">
+<h4><code>R</code> script</h4>
+<p>You can source an R script. For example,</p>
+<pre class="r"><code>source(&quot;plot_script.R&quot;)</code></pre>
+<p><br></p>
+</div>
+<div id="site.r" class="section level4">
+<h4><code>_site.R</code></h4>
+<p>Will give you ‘global variables’ that will be available across your site. Note: we’ll move</p>
+<pre class="r"><code>source(&quot;_site.R&quot;)</code></pre>
+<p><br></p>
+</div>
+<div id="rmd-file" class="section level4">
+<h4><code>Rmd</code> file</h4>
+<p>with <code>child='myfile.Rmd'</code></p>
+<div id="rounding-pi" class="section level5">
+<h5>Rounding pi</h5>
+<p>This is our example R Markdown document. It has incredibly important information!</p>
+<pre class="r"><code>round(pi)</code></pre>
+<pre><code>## [1] 3</code></pre>
+</div>
+</div>
+</div>
 </div>
 <div id="troubleshooting" class="section level2">
 <h2>Troubleshooting</h2>

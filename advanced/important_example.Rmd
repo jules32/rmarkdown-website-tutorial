@@ -1,0 +1,18 @@
+---
+title: "important_example"
+author: "Julie"
+date: "December 13, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##### Rounding pi
+
+This is our example R Markdown document. It has incredibly important information!
+
+```{r pi}
+round(pi)
+```

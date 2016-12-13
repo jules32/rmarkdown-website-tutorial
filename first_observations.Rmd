@@ -4,7 +4,7 @@ title: "First observations: let's start exploring"
 
 With this tutorial, we have a working example website that we will explore together. We'll start our exploration online looking at the website architecture, then we'll clone the repo to our local computers. Locally, we will explore further by going back and forth between the R Markdown editor and built webpages, and make modifications. Pushing to Github will make our modifications live!    
 
-We'll also borrow heavily from [RStudio's instructions for R Markdown websites](http://rmarkdown.rstudio.com/rmarkdown_websites.html), which is highly recommended reading.
+We'll also borrow heavily from [**RStudio's instructions for R Markdown websites**](http://rmarkdown.rstudio.com/rmarkdown_websites.html).
 
 ----
 
@@ -18,12 +18,13 @@ We'll also borrow heavily from [RStudio's instructions for R Markdown websites](
 
 ### The website itself
 
-This website has 4 pages: 
+This website has 5 pages: 
 
 - Home
 - First Observations
 - Basic Workflow
 - Getting Sophisticated
+- Your Turn
   
   
 `github.io` means that there is a Github repo behind this website, and we also know the username and repo name:
