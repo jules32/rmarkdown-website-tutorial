@@ -28,17 +28,6 @@ If we open `index.Rmd` we will see that it's all text with a bit of formatting. 
 
 ![](https://docs.google.com/drawings/d/1ff_I5VJAtmF0FYZOIFE6ZW_-8sfwfoOij2AR0eyFs00/pub?w=960&h=720)
 
-## Install the `rmarkdown` package
-
-**Let's start by making sure you have the Build tab.** Install `rmarkdown` if you haven't already: 
-
-```
-install.packages('rmarkdown')
-library(rmarkdown) 
-```
-
-<!---note that the ``` ``` syntax above renders text as a code-looking block--->
-
 <br>
  
 ## Markdown Syntax 
@@ -80,6 +69,23 @@ To have the bullet points render nicely:
 
 - you must have a full blank line 
 - following "To have the bullet points render nicely:"
+
+<br> 
+
+## Install the `rmarkdown` package
+
+**Let's start by making sure you have the Build tab.** Install `rmarkdown` if you haven't already. You can do this by: 
+
+1. paste this code in the Console and hit enter
+
+    ```
+    install.packages('rmarkdown')
+    library(rmarkdown) 
+    ```
+1. from the menu bar select: Tools > Install Packages... "rmarkdown"
+1. from the bottom right pane, click on the Packages tab, click on Install, "rmarkdown"
+
+<!---note that the ``` ``` syntax above renders text as a code-looking block--->
 
 
 
