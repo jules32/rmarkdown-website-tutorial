@@ -19,12 +19,11 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
-<link rel="stylesheet"
-      href="site_libs/highlight/textmate.css"
-      type="text/css" />
-<script src="site_libs/highlight/highlight.js"></script>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
@@ -151,7 +150,6 @@ $(document).ready(function () {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
@@ -241,7 +239,7 @@ $(document).ready(function () {
 <li><code>first_observations.Rmd</code></li>
 <li><code>basic_workflow.Rmd</code></li>
 </ul>
-<p>These first few pages have simple formatting (<strong>bold</strong>, <em>italics</em>), headers, bullet points, links, and images. These are the majority of things you’ll do in Markdown. See a full list of options at <a href="http://rmarkdown.rstudio.com/authoring_basics.html"><strong>RStudio’s Markdown basics</strong></a> or go to Help &gt; Markdown Quick Reference.</p>
+<p>These first few pages have simple formatting (<strong>bold</strong>, <em>italics</em>), headers, bullet points, links, and images. These are the majority of things you’ll do in Markdown. See a full list of options at <a href="http://rmarkdown.rstudio.com/authoring_basics.html"><strong>RStudio’s Markdown basics</strong></a> or go to Help &gt; Markdown Quick Reference. Also, check out their <a href="https://www.rstudio.com/resources/cheatsheets/">R Markdown cheatsheet</a>. And the <a href="http://r4ds.had.co.nz/r-markdown.html">R Markdown chapter in R for Data Science</a> (actually, read the whole thing!)</p>
 <p>Notice that you can insert images locally (from the /images folder), or from online e.g. Google Drawings!</p>
 <p>From <a href="http://rmarkdown.rstudio.com/lesson-8.html">rmarkdown.rstudio.com lesson 8</a>:</p>
 <div class="figure">
@@ -265,9 +263,13 @@ To start a new line here, I needed 2 spaces after <code>tricky.</code> above. As
 <p><br></p>
 </div>
 </div>
-<div id="install-the-rmarkdown-package" class="section level2">
-<h2>Install the <code>rmarkdown</code> package</h2>
-<p><strong>Let’s start by making sure you have the Build tab.</strong> Install <code>rmarkdown</code> if you haven’t already. You can do this by:</p>
+<div id="try-it-out" class="section level2">
+<h2>Try it out</h2>
+<p>Let’s make a few changes to this file and knit it to inspect. Try adding some new Markdown formatted text.</p>
+<p>Also, now is a good time to make sure you have the the Build tab; you’ll need to install <code>rmarkdown</code> if you haven’t already.</p>
+<div id="install-the-rmarkdown-package" class="section level3">
+<h3>Install the <code>rmarkdown</code> package</h3>
+<p>You can do this by:</p>
 <ol style="list-style-type: decimal">
 <li><p>paste this code in the Console and hit enter</p>
 <pre><code>install.packages(&#39;rmarkdown&#39;)
@@ -276,6 +278,7 @@ library(rmarkdown) </code></pre></li>
 <li><p>from the bottom right pane, click on the Packages tab, click on Install, “rmarkdown”</p></li>
 </ol>
 <!---note that the ``` ``` syntax above renders text as a code-looking block--->
+</div>
 </div>
 
 
@@ -286,8 +289,11 @@ library(rmarkdown) </code></pre></li>
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
 
 

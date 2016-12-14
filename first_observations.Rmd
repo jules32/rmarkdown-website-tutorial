@@ -2,9 +2,11 @@
 title: "First observations"
 ---
 
-With this tutorial, we have a working example website that we will explore together. We'll start our exploration online looking at the website architecture, then we'll clone the repo to our local computers. Locally, we will explore further by going back and forth between the R Markdown editor and built webpages, and make modifications. Pushing to Github will make our modifications live!    
+With this tutorial, we have a working example website that we will explore together. We'll learn a few rules and look for patterns to get an understanding of what things do. And you can continue to use this website as a reference after the tutorial, along with [**RStudio's instructions for R Markdown websites**](http://rmarkdown.rstudio.com/rmarkdown_websites.html).      
 
-We'll also borrow heavily from [**RStudio's instructions for R Markdown websites**](http://rmarkdown.rstudio.com/rmarkdown_websites.html).
+We'll start our exploration online looking at the website architecture, then we'll clone the repo to our local computers. Locally, we will explore further by going back and forth between the R Markdown editor and built webpages, and make modifications. Pushing to Github will make our modifications live!    
+
+
 
 ----
 

@@ -38,7 +38,7 @@ Now let's look explore the first few webpages/R Markdown files to get familiar w
 - `first_observations.Rmd`
 - `basic_workflow.Rmd`
 
-These first few pages have simple formatting (**bold**, *italics*), headers, bullet points, links, and images. These are the majority of things you'll do in Markdown. See a full list of options at [**RStudio's Markdown basics**](http://rmarkdown.rstudio.com/authoring_basics.html) or go to Help > Markdown Quick Reference.  
+These first few pages have simple formatting (**bold**, *italics*), headers, bullet points, links, and images. These are the majority of things you'll do in Markdown. See a full list of options at [**RStudio's Markdown basics**](http://rmarkdown.rstudio.com/authoring_basics.html) or go to Help > Markdown Quick Reference. Also, check out their [R Markdown cheatsheet](https://www.rstudio.com/resources/cheatsheets/).  
 
 Notice that you can insert images locally (from the /images folder), or from online e.g. Google Drawings!
  
@@ -72,9 +72,15 @@ To have the bullet points render nicely:
 
 <br> 
 
-## Install the `rmarkdown` package
+## Try it out 
 
-**Let's start by making sure you have the Build tab.** Install `rmarkdown` if you haven't already. You can do this by: 
+Let's make a few changes to this file and knit it to inspect. Try adding some new Markdown formatted text. 
+
+Also, now is a good time to make sure you have the the Build tab; you'll need to install `rmarkdown` if you haven't already. 
+
+### Install the `rmarkdown` package
+
+You can do this by: 
 
 1. paste this code in the Console and hit enter
 
@@ -86,6 +92,5 @@ To have the bullet points render nicely:
 1. from the bottom right pane, click on the Packages tab, click on Install, "rmarkdown"
 
 <!---note that the ``` ``` syntax above renders text as a code-looking block--->
-
 
 

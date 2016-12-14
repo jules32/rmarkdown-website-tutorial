@@ -26,6 +26,7 @@ You'll need to add it to the nav bar in `_site.yml` too.
 1. move `./advanced/_footer.html` to `./_footer.html` (or create a new one)
 2. uncomment the footer in `_site.yml`
 
+<br>
 
 ### Add three columns
 

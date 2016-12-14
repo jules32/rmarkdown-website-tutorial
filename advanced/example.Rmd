@@ -1,0 +1,16 @@
+---
+title: "important_example"
+author: "Julie"
+date: "December 13, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This text comes from a separate R Markdown file -- how would you ever know that this is a separate file!
+
+Here is an example of inline R code: if you round `r pi` you get `r round(pi)`.
+
+This is the end of this separate and important R Markdown child file.
