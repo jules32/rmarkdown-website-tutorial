@@ -46,7 +46,21 @@ From [rmarkdown.rstudio.com lesson 8](http://rmarkdown.rstudio.com/lesson-8.html
 
 ![](images/markdown_rmarkdownlesson-8.png)
 
+
+
+<br> 
+
+## Build your website!
+
+Let's make a few changes to this file and knit it to inspect. Try adding some new Markdown formatted text. 
+
+Also, now is a good time to make sure you have the the Build tab; you may need to install `rmarkdown` if you haven't already (below). 
+
+Click `Build Website` in the Build tab (or type `rmarkdown::render_site()` in the Console) and inspect your Website! Commit and push to see it live online. 
+
 <br>
+
+## Other
 
 ### Tips for learning Markdown
 
@@ -70,13 +84,7 @@ To have the bullet points render nicely:
 - you must have a full blank line 
 - following "To have the bullet points render nicely:"
 
-<br> 
-
-## Try it out 
-
-Let's make a few changes to this file and knit it to inspect. Try adding some new Markdown formatted text. 
-
-Also, now is a good time to make sure you have the the Build tab; you'll need to install `rmarkdown` if you haven't already. 
+<br>
 
 ### Install the `rmarkdown` package
 

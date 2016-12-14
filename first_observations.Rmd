@@ -57,10 +57,13 @@ Let's go to **<https://github.com/jules32/rmarkdown-website-tutorial>**.
 
 Let's start digging deeper and playing with this.  
 
-First, fork the [jules32/rmarkdown-website-tutorial](https://github.com/jules32/rmarkdown-website-tutorial) repo into your own account.  
-Then, clone to your local computer using RStudio (preferred) the [Desktop App](https://desktop.github.com/), or the command line.
+1. Fork the [jules32/rmarkdown-website-tutorial](https://github.com/jules32/rmarkdown-website-tutorial) repo into your own account. 
 
-![](images/fork.png)
+2. Edit the URL for the website by replacing `jules32` with your GitHub username
+
+3. Clone to your local computer using RStudio (preferred) the [Desktop App](https://desktop.github.com/), or the command line.
+
+![](https://docs.google.com/drawings/d/1yy2VFQy4QqxfOzt-XtTSNA91qoCI7jPo0ob7Pm89SBg/pub?w=960&h=720)
 
 
 

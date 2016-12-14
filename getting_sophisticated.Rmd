@@ -156,14 +156,16 @@ plot(x)
 
 You can source an R script. This is a super powerful way to avoid copy-pasting your analyses. For example: 
 
-```{r plot, echo=T, warning=FALSE, message=F}
-## source an external script
+```{r source gdp script, echo=T, warning=FALSE, message=F}
+## source an external script 
 source("advanced/my_script.R")
 
-## plot data from `my_script.R`
-ggplot(data = data_from_my_script, aes(x = year, y = pop)) + 
+## use the calc_gdp() function `my_script.R`
+my_data <- calc_gdp(my_country <- 'Slovenia')
+
+ggplot(data = my_data, aes(x = year, y = pop)) + 
   geom_point() + 
-  labs(title = data_from_my_script$country)
+  labs(title = my_data$country)
 ```
 
 <br>
@@ -182,7 +184,7 @@ source("_site.R")
 
 You can insert separate R Markdown files too; text and code will be incorporated seamlessly into this page. This R Markdown file is considered the 'parent' file, and the one that is incorporated is the 'child' file. In the code chunk below, we'll say `{r, child='advanced/important_example.Rmd'}`. 
 
-```{r, child='advanced/example.Rmd'}
+```{r child, child='advanced/example.Rmd'}
 ```
  
 <br>

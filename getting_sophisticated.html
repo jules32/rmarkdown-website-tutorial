@@ -408,7 +408,7 @@ Put in your css file or directly in rmarkdown--->
 <p><br></p>
 <div id="in-line" class="section level3">
 <h3>in line</h3>
-<p>Here is an example inline. The date when I last built the website is 2016-12-13. My favorite number is 13.1415927. There are 19 files and folders in our repo. This is not just text; his is executable R code that is 100% awesome!</p>
+<p>Here is an example inline. The date when I last built the website is 2016-12-14. My favorite number is 13.1415927. There are 19 files and folders in our repo. This is not just text; his is executable R code that is 100% awesome!</p>
 <p><br></p>
 </div>
 <div id="in-a-code-chunk" class="section level3">
@@ -423,14 +423,16 @@ plot(x)</code></pre>
 <div id="r-script" class="section level4">
 <h4><code>R</code> script</h4>
 <p>You can source an R script. This is a super powerful way to avoid copy-pasting your analyses. For example:</p>
-<pre class="r"><code>## source an external script
+<pre class="r"><code>## source an external script 
 source(&quot;advanced/my_script.R&quot;)
 
-## plot data from `my_script.R`
-ggplot(data = data_from_my_script, aes(x = year, y = pop)) + 
+## use the calc_gdp() function `my_script.R`
+my_data &lt;- calc_gdp(my_country &lt;- &#39;Slovenia&#39;)
+
+ggplot(data = my_data, aes(x = year, y = pop)) + 
   geom_point() + 
-  labs(title = data_from_my_script$country)</code></pre>
-<p><img src="getting_sophisticated_files/figure-html/plot-1.png" width="672" /></p>
+  labs(title = my_data$country)</code></pre>
+<p><img src="getting_sophisticated_files/figure-html/source%20gdp%20script-1.png" width="672" /></p>
 <p><br></p>
 </div>
 <div id="a-specific-r-script-_site.r" class="section level4">
