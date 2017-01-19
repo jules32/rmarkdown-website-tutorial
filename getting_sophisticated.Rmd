@@ -109,6 +109,7 @@ Put in your css file or directly in rmarkdown--->
 <br>
 
 <center>
+`<center>**Here the text is centered. Here are good resources:**</center>`  
 **Here the text is centered. Here are good resources:**
 
 • [w3schools.com - HTML references](http://www.w3schools.com/tags/) • [w3schools.com - CSS tutorial](http://www.w3schools.com/css/) • 
