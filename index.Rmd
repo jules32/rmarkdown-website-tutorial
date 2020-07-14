@@ -18,7 +18,7 @@ We will be looking ath the best option strategies at different granularities!
 
 One of the best known finance websites for the main street is [Yahoo Finance](https://finance.yahoo.com/).
 
-Current Pct B for TSLA is `r Stock_Data$pctB`. Last Price is `r Stock_Data$Close`. 
+Current Pct B for TSLA is `r Stock_Data$pctB`. Last Price is `r Stock_Data$Close`. Tralalalalalalala.
 
 
 1. Simple Strategies
