@@ -6,13 +6,19 @@ output:
     fig_width: 1
 ---
 
+```{r, echo=FALSE}
+
+Stock_Data <- Yahoo_Finance_Data(Ticker = "TSLA", Range = "10d") %>% Apply_Bare_Bones_Trading_Signal()
+
+```
+
 ----
 
 We will be looking ath the best option strategies at different granularities!
 
-It's possible to create well-designed websites for free using [RStudio's R Markdown](http://rmarkdown.rstudio.com/) and hosting them on [Github](http://github.com). 
+One of the best known finance websites for the main street is [Yahoo Finance](https://finance.yahoo.com/).
 
-***Creating websites with R Markdown can be done without knowing R or HTML, CSS, etc,*** and that's where we'll start.
+Current Pct B for TSLA is `r Stock_Data$pctB`.
 
 1. Simple Strategies
 1. Two Sided Option Strategies
