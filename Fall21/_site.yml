@@ -1,0 +1,15 @@
+name: "ds5220f21"
+navbar:
+  title: "DS-5220"
+  left:
+    - text: "Info"
+      href: index.html
+    - text: "Schedule"
+      href: schedule.html
+output_dir: "."
+output:
+  html_document:
+    theme: yeti
+    highlight: textmate
+#    include:
+#      after_body: _footer.html

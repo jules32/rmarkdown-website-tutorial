@@ -1,0 +1,8 @@
+---
+site: bookdown::bookdown_site
+output:
+  html_document:
+    fig_width: 1
+---
+
+#### TBD..

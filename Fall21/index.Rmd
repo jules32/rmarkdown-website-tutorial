@@ -1,0 +1,42 @@
+---
+site: bookdown::bookdown_site
+output:
+  html_document:
+    fig_width: 1
+---
+
+## Supervised Machine Learning, Fall 2018
+
+
+#### TF 8:00am - 9:40am, TBD
+ 
+**Instructor:** [Kaushal Paneri](https://www.linkedin.com/in/kaushalpaneri/)  
+Email: paneri.k@northeastern.edu  
+Office hours: TBD.
+
+**Teaching assistants:**  
+
+TBD.
+
+**Course policies and administration:**
+
+Incoming MSDS students are required to pass prerequisite exams in order to enroll for this course. For more information, please reach out to program directors [Prof. Pedja Radivojac](predrag@northeastern.edu) or Prof. Dave Kaeli.
+
+
+[Academic integrity policy](http://www.northeastern.edu/osccr/academic-integrity-policy/) is strictly enforced.
+
+**Texts:**
+
+* An Introduction to Statistical Learning, Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani.
+
+* Pattern recognition and machine learning, Christopher Bishop.
+
+**Additional Resources**
+
+* Probability Review
+  - [Review of Probability and Statistics (by David Blei)](http://khoury.neu.edu/home/eelhami/courses/CS6140_Fall16/lecture0_review_probability_1.pdf)
+  - [Another Good Review of Probability Theory (by Arian Maleki)](http://khoury.neu.edu/home/eelhami/courses/CS6140_Fall16/lecture0_review_probability_2.pdf)
+
+* Linear Algebra Review
+  - [Review of Linear Algebra (by Zico Kolter)](http://khoury.neu.edu/home/eelhami/courses/CS6140_Fall16/lecture0_review_linearAlgebra_1.pdf)
+  - [Matrix Cookbook (collection of useful operations on matrices, by Petersen and Pedersen)](http://khoury.neu.edu/home/eelhami/courses/CS6140_Fall16/lecture0_matrixCookbook.pdf)
